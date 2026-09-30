@@ -1,0 +1,42 @@
+{
+  "geoid": "24027",
+  "county": "Howard County",
+  "state": "Maryland",
+  "hazard": "inland_flood",
+  "status": "validated",
+  "analysis_date": "2026-09-23",
+  "analysis_crs": "EPSG:26918",
+  "road_scope": "Census TIGERweb Primary Roads (MTFCC S1100/S1200)",
+  "hazard_footprint": "FEMA NFHL Special Flood Hazard Area (SFHA_TF='T')",
+  "annualized_frequency": 2.5714285714285716,
+  "frequency_min_national": 0.0,
+  "frequency_max_national": 12.964285714285714,
+  "normalized_frequency": 0.19834710743801656,
+  "total_primary_road_miles": 108.7627750614346,
+  "flood_exposed_primary_road_miles": 2.432870836162559,
+  "transportation_exposure": 0.022368598399483217,
+  "transportation_exposure_percent": 2.236859839948322,
+  "transportation_consequence_raw_aadt": 78851.59247681827,
+  "transportation_consequence_normalized": null,
+  "transportation_stress": null,
+  "annualized_exposed_road_miles_per_year": 6.255953578703724,
+  "annualized_relative_road_exposure": 0.05751925302724256,
+  "annualized_relative_road_exposure_percent": 5.751925302724256,
+  "feature_counts": {
+    "primary_road_features_returned": 98,
+    "sfha_features_returned": 273,
+    "hpms_primary_road_features_returned": 2257,
+    "national_counties_in_frequency_normalization": 3232
+  },
+  "formulas": {
+    "aael": "annualized_frequency \u00d7 flood_exposed_primary_road_miles",
+    "relative": "annualized_exposed_road_miles_per_year \u00f7 total_primary_road_miles"
+  },
+  "sources": {
+    "county_and_roads": "U.S. Census Bureau TIGERweb",
+    "flood_footprint": "FEMA National Flood Hazard Layer",
+    "frequency": "FEMA National Risk Index Counties"
+  },
+  "interpretation": "Annualized road-exposure indicator; not damage, closure, loss, or engineering risk.",
+  "remaining_dependency": "National flood-exposed HPMS consequence values are required before percentile ranking and final Transportation Stress can be calculated."
+}
