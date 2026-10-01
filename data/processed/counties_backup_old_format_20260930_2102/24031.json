@@ -1,0 +1,43 @@
+{
+  "geoid": "24031",
+  "county": "Montgomery County",
+  "state": "Maryland",
+  "hazard": "inland_flood",
+  "status": "national_consequence_rank_pending",
+  "analysis_date": "2026-09-30",
+  "analysis_crs": "EPSG:26918",
+  "road_scope": "Census TIGERweb Primary Roads (MTFCC S1100/S1200)",
+  "hazard_footprint": "FEMA NFHL Special Flood Hazard Area (SFHA_TF='T')",
+  "annualized_frequency": 5.464285714285714,
+  "frequency_min_national": 0.0,
+  "frequency_max_national": 12.964285714285714,
+  "normalized_frequency": 0.4214876033,
+  "total_primary_road_miles": 127.151121,
+  "flood_exposed_primary_road_miles": 4.827027,
+  "transportation_exposure": 0.0379629107,
+  "transportation_exposure_percent": 3.796291,
+  "transportation_consequence_raw_aadt": 129005.865531,
+  "transportation_consequence_normalized": null,
+  "transportation_stress": null,
+  "annualized_exposed_road_miles_per_year": 26.376253,
+  "annualized_relative_road_exposure": 0.2074401905,
+  "annualized_relative_road_exposure_percent": 20.744019,
+  "feature_counts": {
+    "primary_road_features_returned": 124,
+    "sfha_features_returned": 372,
+    "hpms_primary_road_features_returned": 5462,
+    "national_counties_in_frequency_normalization": 3232
+  },
+  "formulas": {
+    "aael": "annualized_frequency \u00d7 flood_exposed_primary_road_miles",
+    "relative": "annualized_exposed_road_miles_per_year \u00f7 total_primary_road_miles"
+  },
+  "sources": {
+    "county_and_roads": "U.S. Census Bureau TIGERweb",
+    "flood_footprint": "FEMA National Flood Hazard Layer",
+    "frequency": "FEMA National Risk Index Counties",
+    "hpms_traffic": "FHWA Highway Performance Monitoring System 2024"
+  },
+  "interpretation": "Transportation exposure and traffic intensity indicators; not damage, closure, loss, or engineering risk.",
+  "remaining_dependency": "National flood-exposed HPMS consequence values are required before percentile ranking and final Transportation Stress can be calculated."
+}

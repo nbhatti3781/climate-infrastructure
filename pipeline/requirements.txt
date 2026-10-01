@@ -1,0 +1,10 @@
+# Pipeline dependencies for Maryland inland flood preprocessing
+# Python 3.12 or newer required.
+#
+# shapely — geometry operations (intersection, union, length measurement)
+# pyproj  — coordinate-reference-system transformations (WGS-84 ↔ EPSG:26918)
+#
+# All other access uses the Python standard library (urllib, json, pathlib).
+
+shapely==2.1.2
+pyproj==3.7.2

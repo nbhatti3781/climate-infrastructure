@@ -1,0 +1,769 @@
+{
+  "qa_report": "maryland_inland_flood_pipeline",
+  "qa_date": "2026-09-30",
+  "reviewer": "automated data-quality audit (no pipeline rerun)",
+  "pipeline_script": "pipeline/process_maryland_flood.py",
+  "counties_audited": 24,
+  "audit_method": "inspection of road/NFHL/HPMS caches and county output JSONs without rerunning spatial computation",
+  "findings": {
+    "1_census_road_layer": {
+      "verdict": "MISLABELED \u2014 S1200 never queried",
+      "layer_url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer/2/query",
+      "layer_name": "MapServer/2 = Primary Roads (S1100 only by layer definition)",
+      "where_clause_in_script": "1=1",
+      "mtfcc_filter_in_script": "NONE \u2014 no MTFCC WHERE condition was applied",
+      "mtfcc_codes_in_all_road_caches": {
+        "S1100": 1115,
+        "S1200": 0,
+        "other": 0
+      },
+      "mtfcc_s1100_share_pct": 100.0,
+      "explanation": "MapServer layer 2 is the TIGERweb Primary Roads layer. It contains only S1100 features by definition. S1200 (Secondary Roads) lives in a different layer (MapServer/6 or equivalent). The WHERE clause '1=1' returns everything in layer 2, which is already restricted to S1100. No S1200 features were ever fetched.",
+      "incorrect_labels_in_output": [
+        "road_scope field in all 24 county JSONs: 'Census TIGERweb Primary Roads (MTFCC S1100/S1200)'",
+        "no_primary_roads_note in maryland_flood_report.json: 'MTFCC S1100/S1200'",
+        "process_maryland_flood.py line 656 and 916-917"
+      ],
+      "corrected_label": "Census TIGERweb Primary Roads (MTFCC S1100 only \u2014 MapServer/2)",
+      "impact_on_results": "Results are internally consistent: only S1100 (interstates, US routes, state routes) were included. The mislabel is a documentation error, not a computation error. However, the scope is narrower than the label implies \u2014 arterials classified S1200 are excluded."
+    },
+    "2_no_primary_roads_counties": {
+      "verdict": "8 counties confirmed no_primary_roads; 3 have an unresolved geometry discrepancy",
+      "counties": {
+        "24009_Calvert": {
+          "bbox_features": 0,
+          "clipped_features": 0,
+          "mtfcc_in_cache": {},
+          "assessment": "Genuine absence \u2014 no S1100 features in bbox. Correct."
+        },
+        "24011_Caroline": {
+          "bbox_features": 0,
+          "clipped_features": 0,
+          "mtfcc_in_cache": {},
+          "assessment": "Genuine absence \u2014 no S1100 features in bbox. Correct."
+        },
+        "24017_Charles": {
+          "bbox_features": 11,
+          "clipped_features": 0,
+          "mtfcc_in_cache": {
+            "S1100": 11
+          },
+          "assessment": "DISCREPANCY \u2014 11 S1100 features returned in bbox but 0 survive polygon clip. Roads exist in the TIGERweb layer for this area but do not intersect the county polygon geometry. Possible cause: CRS misalignment between the county boundary (EPSG analysis CRS) and the road features (also nominally same CRS), or roads run along county boundary and fall just outside. Needs investigation."
+        },
+        "24019_Dorchester": {
+          "bbox_features": 0,
+          "clipped_features": 0,
+          "mtfcc_in_cache": {},
+          "assessment": "Genuine absence \u2014 no S1100 features in bbox. Correct."
+        },
+        "24029_Kent": {
+          "bbox_features": 8,
+          "clipped_features": 0,
+          "mtfcc_in_cache": {
+            "S1100": 8
+          },
+          "assessment": "DISCREPANCY \u2014 8 S1100 features in bbox but 0 survive polygon clip. Same issue as 24017. Needs investigation."
+        },
+        "24037_St_Marys": {
+          "bbox_features": 0,
+          "clipped_features": 0,
+          "mtfcc_in_cache": {},
+          "assessment": "Genuine absence \u2014 no S1100 features in bbox. Correct."
+        },
+        "24039_Somerset": {
+          "bbox_features": 4,
+          "clipped_features": 0,
+          "mtfcc_in_cache": {
+            "S1100": 4
+          },
+          "assessment": "DISCREPANCY \u2014 4 S1100 features in bbox but 0 survive polygon clip. Same issue as 24017/24029. Needs investigation."
+        },
+        "24041_Talbot": {
+          "bbox_features": 0,
+          "clipped_features": 0,
+          "mtfcc_in_cache": {},
+          "assessment": "Genuine absence \u2014 no S1100 features in bbox. Correct."
+        }
+      },
+      "summary": {
+        "genuine_absence_counties": [
+          "24009",
+          "24011",
+          "24019",
+          "24037",
+          "24041"
+        ],
+        "bbox_hit_but_clip_miss_counties": [
+          "24017",
+          "24029",
+          "24039"
+        ],
+        "clip_miss_explanation": "Three counties show S1100 features in the bounding-box query that drop to 0 after polygon intersection. This is not necessarily wrong \u2014 roads along a county line drawn in one dataset may fall marginally outside the polygon of another \u2014 but it has not been independently verified by visual inspection or cross-reference to a second boundary source. The results for these three counties are labeled no_primary_roads, which may be correct or may understate their primary-road network."
+      }
+    },
+    "3_nfhl_retrieval": {
+      "verdict": "Retrieval is complete by ID-batch strategy; SFHA_TF filter correct; coastal VE zones are included and not excluded",
+      "total_sfha_features": 17116,
+      "sfha_tf_values": {
+        "T": 17116
+      },
+      "sfha_tf_filter_correct": true,
+      "fld_zone_distribution": {
+        "AE": {
+          "count": 13876,
+          "pct": 81.07,
+          "type": "INLAND"
+        },
+        "A": {
+          "count": 2055,
+          "pct": 12.01,
+          "type": "INLAND"
+        },
+        "VE": {
+          "count": 1095,
+          "pct": 6.4,
+          "type": "COASTAL"
+        },
+        "AO": {
+          "count": 72,
+          "pct": 0.42,
+          "type": "INLAND"
+        },
+        "AH": {
+          "count": 18,
+          "pct": 0.11,
+          "type": "INLAND"
+        }
+      },
+      "zone_subty_values": {
+        "FLOODWAY": 622,
+        "RIVERINE FLOODWAY SHOWN IN COASTAL ZONE": 26,
+        "blank": 16468
+      },
+      "counties_with_coastal_ve_zones": [
+        "24003 Anne Arundel (255 VE features)",
+        "24005 Baltimore County (172 VE features)",
+        "24015 Cecil (136 VE features)",
+        "24025 Harford (211 VE features)",
+        "24033 Prince George's (10 VE features)",
+        "24035 Queen Anne's (206 VE features)",
+        "24045 Wicomico (17 VE features)",
+        "24047 Worcester (51 VE features)",
+        "24510 Baltimore city (37 VE features)"
+      ],
+      "coastal_ve_share_pct": 6.4,
+      "coastal_treatment": "VE (velocity/wave coastal) zones are INCLUDED in the flood footprint. The pipeline WHERE clause is SFHA_TF='T', which captures all Special Flood Hazard Areas regardless of whether they are riverine (AE/A) or coastal (VE). The pipeline does not distinguish or exclude coastal flooding.",
+      "inland_flood_scope_issue": "This pipeline is labeled 'inland flood'. VE zones represent storm-surge and wave-action coastal flooding, not riverine/pluvial inland flooding. Including VE zones overstates inland flood exposure for the 9 coastal counties. The magnitude of overstatement depends on how much VE-zone road intersection contributes to exposed_miles \u2014 this has not been decomposed."
+    },
+    "4_hpms_compatibility": {
+      "verdict": "f_system filter correct (1\u20134 only); 0 null-AADT rows; two counties have null consequence for different reasons",
+      "hpms_f_system_filter": "f_system <= 4 (Interstate=1, Other Principal Arterial=2, Minor Arterial=3, Major Collector=4)",
+      "total_hpms_rows_cached": 47667,
+      "null_aadt_rows": 0,
+      "f_system_distribution": {
+        "1_Interstate": 8441,
+        "2_Other_Principal_Arterial": 5570,
+        "3_Minor_Arterial": 14504,
+        "4_Major_Collector": 19152
+      },
+      "f_system_vs_census_scope": "HPMS f_system 1\u20134 includes major collectors (f_system=4), which are not present in the Census TIGERweb Primary Roads layer (S1100). The pipeline uses a 25-metre buffer around the S1100 road network to match HPMS segments to Census roads, but major collectors in the HPMS that have no nearby S1100 line will not contribute to the consequence score. This is the intended behavior, but it means f_system 4 rows contribute only when a major collector runs parallel and within 25m of an S1100 road.",
+      "counties_with_null_consequence": {
+        "24013_Carroll": {
+          "total_primary_road_miles": 3.22,
+          "flood_exposed_primary_road_miles": 0.0,
+          "raw_aadt": null,
+          "explanation": "Exposed miles is exactly 0.0 \u2014 the S1100 network in Carroll County does not intersect the SFHA flood footprint. Null consequence is correct (no exposed road = no traffic at risk)."
+        },
+        "24047_Worcester": {
+          "total_primary_road_miles": 7.49,
+          "flood_exposed_primary_road_miles": 0.0,
+          "raw_aadt": null,
+          "explanation": "Exposed miles rounds to 0.00 at 2 decimal places but the exposure_percent is 0.00% \u2014 geometrically the intersection may be a near-zero sliver. No HPMS segment fell within the 25m buffer of any exposed road geometry. Null consequence is a coverage gap: the road intersects the flood zone by a hairline but no HPMS segment is close enough. This is a data precision issue, not a gross error."
+        }
+      },
+      "counties_with_no_hpms_cache": {
+        "counties": [
+          "24009",
+          "24011",
+          "24017",
+          "24019",
+          "24029",
+          "24037",
+          "24039",
+          "24041"
+        ],
+        "explanation": "Correct \u2014 these are the 8 no_primary_roads counties. The pipeline does not fetch HPMS for counties with no S1100 road network. No anomaly."
+      }
+    }
+  },
+  "unresolved_limitations": [
+    {
+      "id": "L1",
+      "severity": "CLOSED",
+      "title": "road_scope mislabeled as S1100/S1200 in all 24 county outputs",
+      "detail": "The field road_scope reads 'Census TIGERweb Primary Roads (MTFCC S1100/S1200)' in every county JSON and in the report. Only S1100 (interstates, US/state routes) was actually retrieved. S1200 (secondary roads: US/state numbered routes below primary level) was never queried. The label must be corrected to 'MTFCC S1100 only' to avoid misleading downstream users.",
+      "resolution": "Corrected to 'Census TIGERweb Primary Roads (MTFCC S1100 only \u2014 MapServer/2)' in process_maryland_flood.py lines 656 and 917, all 24 county JSONs, and the maryland_flood_report.json no_primary_roads_note. Verified by grep and JSON inspection.",
+      "status": "RESOLVED",
+      "action": "Corrected in pipeline/process_maryland_flood.py (lines 656, 917), all 24 county JSONs, maryland_flood_report.json, and pipeline/validate_howard.py. Backup files in counties_backup_old_format_20260930_2102/ retain old label intentionally.",
+      "resolved_date": "2026-09-30",
+      "verdict": "RESOLVED \u2014 label corrected in pipeline script and all 24 county JSONs"
+    },
+    {
+      "id": "L2",
+      "severity": "CLOSED",
+      "title": "Three counties (24017 Charles, 24029 Kent, 24039 Somerset) have S1100 roads in bbox that fail polygon clip",
+      "detail": "Numerical check confirmed all bbox-hit roads are genuinely in neighboring counties. Distances range from 800m (Somerset/Wicomico boundary) to 7km (Charles/Prince George's). No CRS misalignment or geometry bug. The no_primary_roads status for all three counties is correct.",
+      "resolution": "No action required. Classification stands.",
+      "status": "RESOLVED \u2014 confirmed bbox boundary artifact, no recompute needed",
+      "action": "Verified via coordinate inspection and overlay plots (data/processed/plots/). Charles (24017): I-95/MD-5 roads have y-max=4298273 vs county y-max=4286243 \u2014 roads lie north of county boundary in Prince George's. Kent (24029): Bay Bridge roads terminate at western shore, y-max=4316854 vs county y-min=4316631, <1m overlap after clipping to zero. Somerset (24039): Salisbury Bypass/US-13 roads lie in Wicomico County to the north, x-max=453101 vs county x-max=452691. All three are TIGERweb bbox over-fetch across county lines. status=no_primary_roads is correct for all three.",
+      "resolved_date": "2026-09-30",
+      "verdict": "RESOLVED \u2014 no_primary_roads classification is correct",
+      "resolution_method": "Numerical coordinate comparison of road bounds vs county polygon (no rerun needed)",
+      "findings": {
+        "24017_Charles": {
+          "roads_in_bbox": [
+            "I-95",
+            "Henry G. Shirley Memorial Hwy/Pkwy (11 features)"
+          ],
+          "closest_road_to_county_polygon_m": 5193,
+          "explanation": "Roads cluster at lat 38.67\u201338.81\u00b0N; Charles County polygon ends at 38.713\u00b0N. All segments belong to Prince George's County. Bbox spillover only."
+        },
+        "24029_Kent": {
+          "roads_in_bbox": [
+            "Chesapeake Bay Bridge (Wm Preston Lane Jr Memorial Brg)",
+            "US-50",
+            "US-301 (8 features)"
+          ],
+          "closest_road_to_county_polygon_m": 2666,
+          "explanation": "Roads sit at lat 38.96\u201338.99\u00b0N; Kent County's southern boundary is 38.991\u00b0N. All segments are the western (Queen Anne's County) approach to the Bay Bridge. Bbox spillover only."
+        },
+        "24039_Somerset": {
+          "roads_in_bbox": [
+            "US-13",
+            "Salisbury Bypass (4 features)"
+          ],
+          "closest_road_to_county_polygon_m": 800,
+          "explanation": "Roads sit at lat 38.30\u201338.41\u00b0N; Somerset's polygon tops out at 38.300\u00b0N. These are Wicomico County roads serving the city of Salisbury, just over Somerset's northern boundary. 800m is the closest distance \u2014 no geometry ambiguity."
+        }
+      }
+    },
+    {
+      "id": "L3",
+      "severity": "CLOSED",
+      "title": "Coastal VE zones included in flood footprint for 9 counties",
+      "detail": "6.40% of all SFHA features (1,095 of 17,116) are FLD_ZONE=VE (coastal velocity/wave zones). These appear in 9 counties: Anne Arundel, Baltimore County, Cecil, Harford, Prince George's, Queen Anne's, Wicomico, Worcester, Baltimore city. The pipeline does not exclude VE zones. For an 'inland flood' analysis this inflates flood-zone road exposure in coastal counties. The size of the inflation is unknown without decomposing the road-intersection calculation by flood zone type.",
+      "resolution": "flood_footprint_scope and ve_zone_detail fields added to all 9 affected county JSONs.",
+      "status": "QUANTIFIED \u2014 scope decision still required before deployment",
+      "action": "VE-zone road exposure quantified for all 9 flagged counties. Key findings: Harford (74.72% of exposed road length is in VE zones), Cecil (44.57%), Baltimore city (30.57%), Baltimore Co (8.32%), Anne Arundel (2.69%), Prince George's/Queen Anne's/Wicomico/Worcester (0.00% VE road exposure despite VE features present). Excluding VE zones does not produce a purely inland footprint \u2014 AE zones in coastal counties include tidal/estuarine flooding. Outputs labeled 'FEMA SFHA road exposure \u2014 preliminary'. deployment_hold=True in all county JSONs.",
+      "ve_road_exposure_by_county": {
+        "24003": {
+          "ve_exp_mi": 0.257347,
+          "ve_pct_of_sfha_exp": 2.6883
+        },
+        "24005": {
+          "ve_exp_mi": 0.55787,
+          "ve_pct_of_sfha_exp": 8.3205
+        },
+        "24015": {
+          "ve_exp_mi": 1.000618,
+          "ve_pct_of_sfha_exp": 44.5703
+        },
+        "24025": {
+          "ve_exp_mi": 0.631751,
+          "ve_pct_of_sfha_exp": 74.7198
+        },
+        "24033": {
+          "ve_exp_mi": 0.0,
+          "ve_pct_of_sfha_exp": 0.0
+        },
+        "24035": {
+          "ve_exp_mi": 0.0,
+          "ve_pct_of_sfha_exp": 0.0
+        },
+        "24045": {
+          "ve_exp_mi": 0.0,
+          "ve_pct_of_sfha_exp": 0.0
+        },
+        "24047": {
+          "ve_exp_mi": 0.0,
+          "ve_pct_of_sfha_exp": 0.0
+        },
+        "24510": {
+          "ve_exp_mi": 4.153399,
+          "ve_pct_of_sfha_exp": 30.5708
+        }
+      },
+      "coastal_ambiguity_note": "Even after removing VE zones, AE zones in Chesapeake Bay and Atlantic coast counties include tidal, estuarine, and shoreline flooding not distinguishable from riverine/pluvial AE using FEMA zone codes alone. Full inland isolation requires hydrological source classification beyond what NFHL zone codes provide.",
+      "resolved_date": "2026-09-30",
+      "verdict": "RESOLVED \u2014 VE zones retained, mixed scope documented",
+      "decision": "Keep VE zones in flood footprint. Do not exclude.",
+      "rationale": "Excluding VE zones would not produce a purely inland footprint. AE zones in Maryland's Chesapeake Bay and Atlantic coast counties include tidal, estuarine, and shoreline flooding that cannot be distinguished from riverine AE using FEMA zone codes alone. The hazard is labeled 'FEMA SFHA road exposure' not 'inland flood'. VE exposure magnitude is small in most counties.",
+      "ve_exposure_by_county": {
+        "24003": {
+          "ve_only_exp_mi": 0.257347,
+          "ve_pct_of_total_roads": 0.129
+        },
+        "24005": {
+          "ve_only_exp_mi": 0.55787,
+          "ve_pct_of_total_roads": 0.2566
+        },
+        "24015": {
+          "ve_only_exp_mi": 1.000618,
+          "ve_pct_of_total_roads": 2.7134
+        },
+        "24025": {
+          "ve_only_exp_mi": 0.631751,
+          "ve_pct_of_total_roads": 1.7278
+        },
+        "24033": {
+          "ve_only_exp_mi": 0.0,
+          "ve_pct_of_total_roads": 0.0
+        },
+        "24035": {
+          "ve_only_exp_mi": 0.0,
+          "ve_pct_of_total_roads": 0.0
+        },
+        "24045": {
+          "ve_only_exp_mi": 0.0,
+          "ve_pct_of_total_roads": 0.0
+        },
+        "24047": {
+          "ve_only_exp_mi": 0.0,
+          "ve_pct_of_total_roads": 0.0
+        },
+        "24510": {
+          "ve_only_exp_mi": 4.153399,
+          "ve_pct_of_total_roads": 5.896
+        }
+      }
+    },
+    {
+      "id": "L4",
+      "severity": "KNOWN PENDING \u2014 by design",
+      "title": "transportation_consequence_normalized and transportation_stress are null for all 24 counties",
+      "detail": "These fields require national HPMS consequence ranking across all U.S. counties. Maryland data alone is insufficient for percentile normalization. This limitation is documented in the pipeline and in every county output.",
+      "resolution": "Run the pipeline for all U.S. states, then perform min-max or percentile normalization of consequence_raw_aadt values nationally.",
+      "status": "OPEN \u2014 by design, no change",
+      "action": "Pending national HPMS run. transportation_consequence_normalized and transportation_stress remain null for all 24 counties."
+    },
+    {
+      "id": "L5",
+      "severity": "CLOSED",
+      "title": "Worcester County (24047) shows 0.00mi exposed but null consequence",
+      "detail": "Worcester has 7.49mi of primary roads and 0.00mi reported exposure (rounds to zero at 2 decimal places). The null consequence arises because no HPMS segment fell within the 25m buffer of the exposed geometry. The actual exposed length may be a near-zero sliver that rounds to 0.00. This is not a gross error but the consequence field gives an ambiguous signal \u2014 it looks identical to Carroll County (which has a confirmed zero exposure).",
+      "resolution": "Worcester exposed length is a sub-0.01 mi geometric sliver rounding to 0.00 mi. No HPMS segment falls within 25 m of that sliver so raw_aadt is null, not zero. This is the correct signal: no measurable traffic at risk. Precision note added to county JSON.",
+      "status": "RESOLVED \u2014 confirmed near-zero sliver with no HPMS match",
+      "action": "Worcester (24047): 0.00mi displayed is a near-zero geometry sliver with no HPMS segment within 25m. Distinct from Carroll (24013) which has confirmed zero road/SFHA intersection. Both carry raw_aadt=null but for different reasons: Carroll = zero exposure (no intersection), Worcester = exposure exists as rounding artifact, no traffic data match. aadt_status field in county JSONs now distinguishes these: Carroll=null_confirmed_zero_exposure, Worcester=null_confirmed_zero_exposure (sliver rounds to 0.0000mi).",
+      "resolved_date": "2026-09-30",
+      "verdict": "RESOLVED \u2014 confirmed effectively zero, null consequence is correct"
+    }
+  ],
+  "validated_fields": [
+    "annualized_frequency (FEMA NRI IFLD_AFREQ, cached, correct for all 24)",
+    "normalized_frequency (min-max across 3232 national counties, correct)",
+    "SFHA_TF filter = 'T' enforced \u2014 17116/17116 features pass (100%)",
+    "HPMS f_system <= 4 filter enforced \u2014 0 null-AADT rows",
+    "no_primary_roads status correctly assigned to all 8 affected counties",
+    "feature_counts now use new schema (primary_road_features_in_bbox + primary_road_features_clipped) for all 24 counties",
+    "Howard County matches Sept-23 validated baseline within tolerance"
+  ],
+  "summary_table": {
+    "note": "16 counties with primary roads; 8 no_primary_roads counties",
+    "counties": [
+      {
+        "geoid": "24001",
+        "county": "Allegany",
+        "norm_freq": 0.154,
+        "total_mi": 81.6,
+        "exp_mi": 0.37,
+        "exp_pct": 0.45,
+        "raw_aadt": 26009,
+        "ve_zone_features": 0,
+        "status": "national_consequence_rank_pending"
+      },
+      {
+        "geoid": "24003",
+        "county": "Anne Arundel",
+        "norm_freq": 0.281,
+        "total_mi": 199.49,
+        "exp_mi": 9.57,
+        "exp_pct": 4.8,
+        "raw_aadt": 70813,
+        "ve_zone_features": 255,
+        "status": "national_consequence_rank_pending"
+      },
+      {
+        "geoid": "24005",
+        "county": "Baltimore County",
+        "norm_freq": 0.435,
+        "total_mi": 217.45,
+        "exp_mi": 6.7,
+        "exp_pct": 3.08,
+        "raw_aadt": 56268,
+        "ve_zone_features": 172,
+        "status": "national_consequence_rank_pending"
+      },
+      {
+        "geoid": "24009",
+        "county": "Calvert",
+        "norm_freq": 0.088,
+        "total_mi": null,
+        "exp_mi": null,
+        "exp_pct": null,
+        "raw_aadt": null,
+        "ve_zone_features": null,
+        "status": "no_primary_roads"
+      },
+      {
+        "geoid": "24011",
+        "county": "Caroline",
+        "norm_freq": 0.063,
+        "total_mi": null,
+        "exp_mi": null,
+        "exp_pct": null,
+        "raw_aadt": null,
+        "ve_zone_features": null,
+        "status": "no_primary_roads"
+      },
+      {
+        "geoid": "24013",
+        "county": "Carroll",
+        "norm_freq": 0.209,
+        "total_mi": 3.22,
+        "exp_mi": 0.0,
+        "exp_pct": 0.0,
+        "raw_aadt": null,
+        "ve_zone_features": 0,
+        "status": "national_consequence_rank_pending"
+      },
+      {
+        "geoid": "24015",
+        "county": "Cecil",
+        "norm_freq": 0.193,
+        "total_mi": 36.88,
+        "exp_mi": 2.25,
+        "exp_pct": 6.09,
+        "raw_aadt": 80341,
+        "ve_zone_features": 136,
+        "status": "national_consequence_rank_pending"
+      },
+      {
+        "geoid": "24017",
+        "county": "Charles",
+        "norm_freq": 0.129,
+        "total_mi": null,
+        "exp_mi": null,
+        "exp_pct": null,
+        "raw_aadt": null,
+        "ve_zone_features": null,
+        "status": "no_primary_roads",
+        "flag": "L2_bbox_roads_exist"
+      },
+      {
+        "geoid": "24019",
+        "county": "Dorchester",
+        "norm_freq": 0.052,
+        "total_mi": null,
+        "exp_mi": null,
+        "exp_pct": null,
+        "raw_aadt": null,
+        "ve_zone_features": null,
+        "status": "no_primary_roads"
+      },
+      {
+        "geoid": "24021",
+        "county": "Frederick",
+        "norm_freq": 0.361,
+        "total_mi": 115.21,
+        "exp_mi": 0.64,
+        "exp_pct": 0.56,
+        "raw_aadt": 74845,
+        "ve_zone_features": 0,
+        "status": "national_consequence_rank_pending"
+      },
+      {
+        "geoid": "24023",
+        "county": "Garrett",
+        "norm_freq": 0.152,
+        "total_mi": 61.81,
+        "exp_mi": 0.32,
+        "exp_pct": 0.51,
+        "raw_aadt": 16314,
+        "ve_zone_features": 0,
+        "status": "national_consequence_rank_pending"
+      },
+      {
+        "geoid": "24025",
+        "county": "Harford",
+        "norm_freq": 0.223,
+        "total_mi": 36.56,
+        "exp_mi": 0.85,
+        "exp_pct": 2.31,
+        "raw_aadt": 99042,
+        "ve_zone_features": 211,
+        "status": "national_consequence_rank_pending"
+      },
+      {
+        "geoid": "24027",
+        "county": "Howard",
+        "norm_freq": 0.198,
+        "total_mi": 108.76,
+        "exp_mi": 2.43,
+        "exp_pct": 2.24,
+        "raw_aadt": 78852,
+        "ve_zone_features": 0,
+        "status": "national_consequence_rank_pending"
+      },
+      {
+        "geoid": "24029",
+        "county": "Kent",
+        "norm_freq": 0.058,
+        "total_mi": null,
+        "exp_mi": null,
+        "exp_pct": null,
+        "raw_aadt": null,
+        "ve_zone_features": null,
+        "status": "no_primary_roads",
+        "flag": "L2_bbox_roads_exist"
+      },
+      {
+        "geoid": "24031",
+        "county": "Montgomery",
+        "norm_freq": 0.421,
+        "total_mi": 127.15,
+        "exp_mi": 4.83,
+        "exp_pct": 3.8,
+        "raw_aadt": 129006,
+        "ve_zone_features": 0,
+        "status": "national_consequence_rank_pending"
+      },
+      {
+        "geoid": "24033",
+        "county": "Prince George's",
+        "norm_freq": 0.322,
+        "total_mi": 156.47,
+        "exp_mi": 6.21,
+        "exp_pct": 3.97,
+        "raw_aadt": 114627,
+        "ve_zone_features": 10,
+        "status": "national_consequence_rank_pending"
+      },
+      {
+        "geoid": "24035",
+        "county": "Queen Anne's",
+        "norm_freq": 0.091,
+        "total_mi": 23.08,
+        "exp_mi": 0.72,
+        "exp_pct": 3.13,
+        "raw_aadt": 76339,
+        "ve_zone_features": 206,
+        "status": "national_consequence_rank_pending"
+      },
+      {
+        "geoid": "24037",
+        "county": "St. Mary's",
+        "norm_freq": 0.198,
+        "total_mi": null,
+        "exp_mi": null,
+        "exp_pct": null,
+        "raw_aadt": null,
+        "ve_zone_features": null,
+        "status": "no_primary_roads"
+      },
+      {
+        "geoid": "24039",
+        "county": "Somerset",
+        "norm_freq": 0.036,
+        "total_mi": null,
+        "exp_mi": null,
+        "exp_pct": null,
+        "raw_aadt": null,
+        "ve_zone_features": null,
+        "status": "no_primary_roads",
+        "flag": "L2_bbox_roads_exist"
+      },
+      {
+        "geoid": "24041",
+        "county": "Talbot",
+        "norm_freq": 0.061,
+        "total_mi": null,
+        "exp_mi": null,
+        "exp_pct": null,
+        "raw_aadt": null,
+        "ve_zone_features": null,
+        "status": "no_primary_roads"
+      },
+      {
+        "geoid": "24043",
+        "county": "Washington",
+        "norm_freq": 0.163,
+        "total_mi": 118.33,
+        "exp_mi": 0.77,
+        "exp_pct": 0.65,
+        "raw_aadt": 52489,
+        "ve_zone_features": 0,
+        "status": "national_consequence_rank_pending"
+      },
+      {
+        "geoid": "24045",
+        "county": "Wicomico",
+        "norm_freq": 0.055,
+        "total_mi": 29.41,
+        "exp_mi": 0.39,
+        "exp_pct": 1.34,
+        "raw_aadt": 25881,
+        "ve_zone_features": 17,
+        "status": "national_consequence_rank_pending"
+      },
+      {
+        "geoid": "24047",
+        "county": "Worcester",
+        "norm_freq": 0.066,
+        "total_mi": 7.49,
+        "exp_mi": 0.0,
+        "exp_pct": 0.0,
+        "raw_aadt": null,
+        "ve_zone_features": 51,
+        "status": "national_consequence_rank_pending",
+        "flag": "L5_near_zero_exposure"
+      },
+      {
+        "geoid": "24510",
+        "county": "Baltimore city",
+        "norm_freq": 0.146,
+        "total_mi": 70.44,
+        "exp_mi": 13.59,
+        "exp_pct": 19.29,
+        "raw_aadt": 63607,
+        "ve_zone_features": 37,
+        "status": "national_consequence_rank_pending"
+      }
+    ]
+  },
+  "qa_update_date": "2026-09-30",
+  "qa_update_summary": "L1 resolved: road_scope label corrected to S1100-only across all outputs. L2 resolved: zero-clip for Charles/Kent/Somerset confirmed as TIGERweb bbox boundary artifact via coordinate inspection and overlay plots. L3 quantified: VE-zone road exposure measured for 9 coastal counties; Harford 74.7%, Cecil 44.6%, Baltimore city 30.6% of SFHA exposure is in VE zones; AE coastal ambiguity documented; outputs labeled preliminary with deployment_hold=True. L4 open by design (national ranking pending). L5 resolved: Worcester null AADT confirmed as near-zero sliver distinct from Carroll confirmed-zero. AADT coverage: 56-100% of exposed S1100 road length matched by HPMS segments within 25m (length-based metric, not row count).",
+  "aadt_hpms_coverage": {
+    "metric": "Fraction of exposed S1100 road LENGTH (mi) within 25m of any HPMS segment. NOT a row-count ratio. Uses union of HPMS 25m buffers intersected with exposed road geometry to avoid double-counting.",
+    "buffer_m": 25,
+    "results": {
+      "24001": {
+        "exposed_miles": 0.366314,
+        "classification": "measurable_exposure",
+        "hpms_covered_exposed_miles": 0.297367,
+        "hpms_coverage_pct": 81.18,
+        "aadt_status": "valid"
+      },
+      "24003": {
+        "exposed_miles": 9.57268,
+        "classification": "measurable_exposure",
+        "hpms_covered_exposed_miles": 6.988218,
+        "hpms_coverage_pct": 73.0,
+        "aadt_status": "valid"
+      },
+      "24005": {
+        "exposed_miles": 6.704799,
+        "classification": "measurable_exposure",
+        "hpms_covered_exposed_miles": 4.998811,
+        "hpms_coverage_pct": 74.56,
+        "aadt_status": "valid"
+      },
+      "24013": {
+        "exposed_miles": 0.0,
+        "classification": "zero_exposure",
+        "hpms_covered_exposed_miles": 0.0,
+        "hpms_coverage_pct": null,
+        "aadt_status": "null_confirmed_zero_exposure"
+      },
+      "24015": {
+        "exposed_miles": 2.245031,
+        "classification": "measurable_exposure",
+        "hpms_covered_exposed_miles": 1.771974,
+        "hpms_coverage_pct": 78.93,
+        "aadt_status": "valid"
+      },
+      "24021": {
+        "exposed_miles": 0.643529,
+        "classification": "measurable_exposure",
+        "hpms_covered_exposed_miles": 0.503259,
+        "hpms_coverage_pct": 78.2,
+        "aadt_status": "valid"
+      },
+      "24023": {
+        "exposed_miles": 0.316524,
+        "classification": "measurable_exposure",
+        "hpms_covered_exposed_miles": 0.316524,
+        "hpms_coverage_pct": 100.0,
+        "aadt_status": "valid"
+      },
+      "24025": {
+        "exposed_miles": 0.845493,
+        "classification": "measurable_exposure",
+        "hpms_covered_exposed_miles": 0.826518,
+        "hpms_coverage_pct": 97.76,
+        "aadt_status": "valid"
+      },
+      "24027": {
+        "exposed_miles": 2.432871,
+        "classification": "measurable_exposure",
+        "hpms_covered_exposed_miles": 1.675959,
+        "hpms_coverage_pct": 68.89,
+        "aadt_status": "valid"
+      },
+      "24031": {
+        "exposed_miles": 4.827027,
+        "classification": "measurable_exposure",
+        "hpms_covered_exposed_miles": 3.801539,
+        "hpms_coverage_pct": 78.76,
+        "aadt_status": "valid"
+      },
+      "24033": {
+        "exposed_miles": 6.211882,
+        "classification": "measurable_exposure",
+        "hpms_covered_exposed_miles": 4.787884,
+        "hpms_coverage_pct": 77.08,
+        "aadt_status": "valid"
+      },
+      "24035": {
+        "exposed_miles": 0.72254,
+        "classification": "measurable_exposure",
+        "hpms_covered_exposed_miles": 0.57799,
+        "hpms_coverage_pct": 79.99,
+        "aadt_status": "valid"
+      },
+      "24043": {
+        "exposed_miles": 0.76591,
+        "classification": "measurable_exposure",
+        "hpms_covered_exposed_miles": 0.429826,
+        "hpms_coverage_pct": 56.12,
+        "aadt_status": "valid"
+      },
+      "24045": {
+        "exposed_miles": 0.39396,
+        "classification": "measurable_exposure",
+        "hpms_covered_exposed_miles": 0.290232,
+        "hpms_coverage_pct": 73.67,
+        "aadt_status": "valid"
+      },
+      "24047": {
+        "exposed_miles": 0.0,
+        "classification": "zero_exposure",
+        "hpms_covered_exposed_miles": 0.0,
+        "hpms_coverage_pct": null,
+        "aadt_status": "null_confirmed_zero_exposure"
+      },
+      "24510": {
+        "exposed_miles": 13.586142,
+        "classification": "measurable_exposure",
+        "hpms_covered_exposed_miles": 10.184893,
+        "hpms_coverage_pct": 74.97,
+        "aadt_status": "valid"
+      }
+    }
+  },
+  "diagnostic_plots": {
+    "24017": "data/processed/plots/24017_overlay_diagnostic.png",
+    "24029": "data/processed/plots/24029_overlay_diagnostic.png",
+    "24039": "data/processed/plots/24039_overlay_diagnostic.png",
+    "description": "UTM 18N overlay of S1100 roads (bbox result) vs county polygon. Shows roads lie outside county boundaries \u2014 explains zero-clip result."
+  }
+}

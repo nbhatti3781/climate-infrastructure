@@ -1,0 +1,43 @@
+{
+  "geoid": "24033",
+  "county": "Prince George's County",
+  "state": "Maryland",
+  "hazard": "inland_flood",
+  "status": "national_consequence_rank_pending",
+  "analysis_date": "2026-09-30",
+  "analysis_crs": "EPSG:26918",
+  "road_scope": "Census TIGERweb Primary Roads (MTFCC S1100/S1200)",
+  "hazard_footprint": "FEMA NFHL Special Flood Hazard Area (SFHA_TF='T')",
+  "annualized_frequency": 4.178571428571429,
+  "frequency_min_national": 0.0,
+  "frequency_max_national": 12.964285714285714,
+  "normalized_frequency": 0.3223140496,
+  "total_primary_road_miles": 156.466293,
+  "flood_exposed_primary_road_miles": 6.211882,
+  "transportation_exposure": 0.0397010902,
+  "transportation_exposure_percent": 3.970109,
+  "transportation_consequence_raw_aadt": 114627.35724,
+  "transportation_consequence_normalized": null,
+  "transportation_stress": null,
+  "annualized_exposed_road_miles_per_year": 25.956794,
+  "annualized_relative_road_exposure": 0.1658938411,
+  "annualized_relative_road_exposure_percent": 16.589384,
+  "feature_counts": {
+    "primary_road_features_returned": 229,
+    "sfha_features_returned": 591,
+    "hpms_primary_road_features_returned": 5318,
+    "national_counties_in_frequency_normalization": 3232
+  },
+  "formulas": {
+    "aael": "annualized_frequency \u00d7 flood_exposed_primary_road_miles",
+    "relative": "annualized_exposed_road_miles_per_year \u00f7 total_primary_road_miles"
+  },
+  "sources": {
+    "county_and_roads": "U.S. Census Bureau TIGERweb",
+    "flood_footprint": "FEMA National Flood Hazard Layer",
+    "frequency": "FEMA National Risk Index Counties",
+    "hpms_traffic": "FHWA Highway Performance Monitoring System 2024"
+  },
+  "interpretation": "Transportation exposure and traffic intensity indicators; not damage, closure, loss, or engineering risk.",
+  "remaining_dependency": "National flood-exposed HPMS consequence values are required before percentile ranking and final Transportation Stress can be calculated."
+}

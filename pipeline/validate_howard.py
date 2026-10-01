@@ -230,7 +230,7 @@ def main() -> dict:
         "status": "national_consequence_rank_pending",
         "analysis_date": date.today().isoformat(),
         "analysis_crs": f"EPSG:{ANALYSIS_SRID}",
-        "road_scope": "Census TIGERweb Primary Roads (MTFCC S1100/S1200)",
+        "road_scope": "Census TIGERweb Primary Roads (MTFCC S1100 only (MapServer/2))",
         "hazard_footprint": "FEMA NFHL Special Flood Hazard Area (SFHA_TF='T')",
         "annualized_frequency": frequency,
         "frequency_min_national": frequency_min,

@@ -1,0 +1,54 @@
+{
+  "geoid": "24027",
+  "county": "Howard County",
+  "state": "Maryland",
+  "hazard": "inland_flood",
+  "status": "national_consequence_rank_pending",
+  "analysis_date": "2026-09-30",
+  "analysis_crs": "EPSG:26918",
+  "road_scope": "Census TIGERweb Primary Roads (MTFCC S1100 only \u2014 MapServer/2)",
+  "hazard_footprint": "FEMA NFHL Special Flood Hazard Area (SFHA_TF='T')",
+  "annualized_frequency": 2.5714285714285716,
+  "frequency_min_national": 0.0,
+  "frequency_max_national": 12.964285714285714,
+  "normalized_frequency": 0.1983471074,
+  "total_primary_road_miles": 108.7627750614346,
+  "flood_exposed_primary_road_miles": 2.432870836162559,
+  "transportation_exposure": 0.0223685984,
+  "transportation_exposure_percent": 2.23686,
+  "transportation_consequence_raw_aadt": 78851.59247673354,
+  "transportation_consequence_normalized": null,
+  "transportation_stress": null,
+  "annualized_exposed_road_miles_per_year": 6.255953578703724,
+  "annualized_relative_road_exposure": 0.057519253,
+  "annualized_relative_road_exposure_percent": 5.751925,
+  "feature_counts": {
+    "primary_road_features_in_bbox": 98,
+    "primary_road_features_clipped": 50,
+    "sfha_features_returned": 273,
+    "hpms_primary_road_features_returned": 2257,
+    "national_counties_in_frequency_normalization": 3232
+  },
+  "formulas": {
+    "aael": "annualized_frequency \u00d7 flood_exposed_primary_road_miles",
+    "relative": "annualized_exposed_road_miles_per_year \u00f7 total_primary_road_miles"
+  },
+  "sources": {
+    "county_and_roads": "U.S. Census Bureau TIGERweb",
+    "flood_footprint": "FEMA National Flood Hazard Layer",
+    "frequency": "FEMA National Risk Index Counties",
+    "hpms_traffic": "FHWA Highway Performance Monitoring System 2024"
+  },
+  "interpretation": "Transportation exposure and traffic intensity indicators; not damage, closure, loss, or engineering risk.",
+  "remaining_dependency": "National flood-exposed HPMS consequence values are required before percentile ranking and final Transportation Stress can be calculated.",
+  "hazard_label": "FEMA SFHA road exposure \u2014 preliminary",
+  "deployment_hold": true,
+  "deployment_hold_reason": "National consequence ranking pending; coastal/inland scope not yet resolved for VE-zone counties",
+  "hpms_coverage_pct_of_exposed_length": 68.89,
+  "hpms_covered_exposed_miles": 1.675959,
+  "qa_notes": [
+    "road_scope corrected from S1100/S1200 to S1100 only (MapServer/2); S1200 was never queried",
+    "transportation_consequence_normalized and transportation_stress pending national HPMS percentile ranking",
+    "outputs labeled preliminary; do not deploy until national consequence ranking is complete and coastal scope decision is resolved"
+  ]
+}

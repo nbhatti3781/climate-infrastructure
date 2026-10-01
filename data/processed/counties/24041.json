@@ -1,0 +1,47 @@
+{
+  "geoid": "24041",
+  "county": "Talbot County",
+  "state": "Maryland",
+  "hazard": "inland_flood",
+  "status": "national_consequence_rank_pending",
+  "analysis_date": "2026-10-01",
+  "analysis_crs": "EPSG:26918",
+  "road_scope": "Census TIGERweb Major Roads (MTFCC S1100 + S1200 \u2014 MapServer layers 2 and 6)",
+  "road_metric": "major-road exposure",
+  "hazard_footprint": "FEMA NFHL Special Flood Hazard Area (SFHA_TF='T')",
+  "annualized_frequency": 0.7857142857142857,
+  "frequency_min_national": 0.0,
+  "frequency_max_national": 12.964285714285714,
+  "normalized_frequency": 0.0606060606,
+  "total_major_road_miles": 152.0037790453979,
+  "flood_exposed_major_road_miles": 3.1137148268247645,
+  "transportation_exposure": 0.0204844567,
+  "transportation_exposure_percent": 2.048446,
+  "transportation_consequence_raw_aadt": 15519.769326864178,
+  "transportation_consequence_normalized": null,
+  "transportation_stress": null,
+  "annualized_exposed_road_miles_per_year": 2.446490221076601,
+  "annualized_relative_road_exposure": 0.0160949302,
+  "annualized_relative_road_exposure_percent": 1.609493,
+  "feature_counts": {
+    "s1100_features_in_bbox": 0,
+    "s1200_features_in_bbox": 161,
+    "primary_road_features_in_bbox": 161,
+    "primary_road_features_clipped": 97,
+    "sfha_features_returned": 1929,
+    "hpms_primary_road_features_returned": 795,
+    "national_counties_in_frequency_normalization": 3232
+  },
+  "formulas": {
+    "aael": "annualized_frequency \u00d7 flood_exposed_primary_road_miles",
+    "relative": "annualized_exposed_road_miles_per_year \u00f7 total_primary_road_miles"
+  },
+  "sources": {
+    "county_and_roads": "U.S. Census Bureau TIGERweb",
+    "flood_footprint": "FEMA National Flood Hazard Layer",
+    "frequency": "FEMA National Risk Index Counties",
+    "hpms_traffic": "FHWA Highway Performance Monitoring System 2024"
+  },
+  "interpretation": "Transportation exposure and traffic intensity indicators; not damage, closure, loss, or engineering risk.",
+  "remaining_dependency": "National flood-exposed HPMS consequence values are required before percentile ranking and final Transportation Stress can be calculated."
+}
