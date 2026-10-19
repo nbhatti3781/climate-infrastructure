@@ -1,0 +1,73 @@
+{
+  "geoid": "24039",
+  "county": "Somerset County",
+  "state": "Maryland",
+  "hazard": "wildfire",
+  "hazard_label": "High / Very High wildfire hazard potential",
+  "method_version": "whp2023-high-very-high-v2",
+  "status": "national_consequence_rank_pending",
+  "analysis_date": "2026-10-07",
+  "analysis_crs": "EPSG:26918",
+  "road_scope": "Census TIGERweb Major Roads (MTFCC S1100 + S1200 \u2014 MapServer layers 2 and 6)",
+  "road_metric": "major-road exposure",
+  "hazard_footprint": "USDA Forest Service WHP 2023 classified cells: High (4) and Very High (5)",
+  "annualized_frequency": 0.004239857942936136,
+  "frequency_metric": "FEMA NRI WFIR_AFREQ: annual wildfire probability (not events/year)",
+  "frequency_min_national": 0.0,
+  "frequency_max_national": 0.0315816713751726,
+  "normalized_frequency": 0.13425058770857926,
+  "total_major_road_miles": 123.76221366350663,
+  "wildfire_exposed_major_road_miles": 4.868644553481883,
+  "transportation_exposure": 0.0393386996674049,
+  "transportation_exposure_percent": 3.93386996674049,
+  "transportation_consequence_raw_aadt": 6228.9539231528715,
+  "transportation_consequence_normalized": null,
+  "transportation_stress": null,
+  "hpms_coverage_pct_of_exposed_length": 5.0342349358943945,
+  "aadt_status": "available",
+  "annualized_exposed_road_miles_per_year": 0.02064236128141292,
+  "annualized_relative_road_exposure": 0.0001667904982496258,
+  "whp_class_major_road_miles": {
+    "very_low": 25.607602954081866,
+    "low": 24.859904803080447,
+    "moderate": 7.72259543803971,
+    "high": 3.285449744719413,
+    "very_high": 1.5831948087624692,
+    "non_burnable": 59.670896387443634,
+    "water": 1.032569527378995
+  },
+  "whp_nodata_major_road_miles": 0.0,
+  "raster_audit": {
+    "sha256": "f4e079ab3d609fb60ccea79d45e4e237a700c843f4846dc03001765e65022ce2",
+    "export_crs": "EPSG:3857",
+    "export_pixel_size": [
+      270.0,
+      270.0
+    ],
+    "source_resolution_metres": 270,
+    "valid_cell_count": 62496,
+    "nodata_cell_count": 0
+  },
+  "feature_counts": {
+    "major_road_features_in_bbox": 117,
+    "hpms_features_returned": 367,
+    "national_counties_in_frequency_normalization": 3144
+  },
+  "sources": {
+    "wildfire_footprint": "https://imagery.geoplatform.gov/iipp/rest/services/Fire_Aviation/USFS_EDW_RMRS_WildfireHazardPotentialClassified/ImageServer",
+    "frequency": "https://services.arcgis.com/XG15cJAlne2vxtgt/arcgis/rest/services/National_Risk_Index_Counties/FeatureServer/0/query",
+    "county_and_roads": "U.S. Census Bureau TIGERweb",
+    "hpms_traffic": "FHWA Highway Performance Monitoring System 2024"
+  },
+  "formulas": {
+    "stress": "normalized_frequency \u00d7 transportation_exposure \u00d7 national wildfire-exposed AADT percentile",
+    "exposure": "High/Very High WHP-exposed major-road length \u00f7 total major-road length"
+  },
+  "interpretation": "Transportation exposure and traffic intensity indicators; not damage, closure, loss, or engineering risk.",
+  "qa_notes": [
+    "270-m source raster; nearest-neighbor export on aligned 270-unit EPSG:3857 service grid. Road lengths measured in EPSG:26918.",
+    "WHP reflects landscape conditions at end of 2020; not a seasonal forecast.",
+    "FEMA frequency and WHP footprint are separate hazard indicators; their product is a screening index, not a road-specific burn probability."
+  ],
+  "remaining_dependency": "National wildfire-exposed HPMS consequence values are required before percentile ranking and final Transportation Stress can be calculated."
+}

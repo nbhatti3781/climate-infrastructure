@@ -1,0 +1,2907 @@
+{
+  "label": "Infrastructure exposure by year \u2014 fixed hazard baseline",
+  "interpretation": "Changes reflect roads and traffic against fixed mapped hazards, not annual hazard conditions.",
+  "target_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "states": [
+    "MD",
+    "DE"
+  ],
+  "county_equivalents": 27,
+  "preparation_status": "blocked_inputs_not_ready",
+  "ec2_launch_paused": true,
+  "gina_review_status": "pending",
+  "publication_allowed": false,
+  "preserved_current_files": {
+    "data/processed/counties/24045.json": "a09e5f7ffe27f0653a02d00589427aaa342ab851db809a5743b15523898e7cdd",
+    "data/processed/counties/24025.json": "f278f97ca2355e6364d11fbdf33dc8a43fb4dbf6e10e2250a28b5095b2ac68c3",
+    "data/processed/counties/24033.json": "b8698ce2961a3bb70b9f82b6e2a11ff44f5756f11bf0815b102c47a329afecce",
+    "data/processed/counties/24009.json": "9622462be20a9cb857b8872e443ed30626d8ddb5cd1bf1b59926a0f5c7561c1a",
+    "data/processed/counties/24029.json": "cb88e395bb0d9b5f8edfdf5c0050df1c349a3a102639fff91b1a22c16a341738",
+    "data/processed/counties/24013.json": "38bdd77777b396be79b8053ed21b9de9a9e8292eadbeea43447430d23232639f",
+    "data/processed/counties/24510.json": "dbb300d894dfa9b215251112655101b42c64a964011520a8706ff2a169d28038",
+    "data/processed/counties/24005.json": "0310525b9081c6dda3a1564e25c8ec8576f2788073a7832a2cafe8083b5fc005",
+    "data/processed/counties/24043.json": "0726f1506118d47c1aa0d83c7a136222f3a402b3751dea1c78839e185cac90e1",
+    "data/processed/counties/24027_s1100_baseline.json": "7278e985f0fd4fd566aac3f7366e1a587c1e193362ea4bce9f6831f7649de31c",
+    "data/processed/counties/24039.json": "57aef9ac5f399d8ac00ff34b4149583ea4f9152c67291b001ee3c30e719e7d3b",
+    "data/processed/counties/24015.json": "e7acf748e0b47304540da9caddb852d056a6ee945445b2de2626585bced38b32",
+    "data/processed/counties/24003.json": "3d76b8fda8b16a9ed097ee1c7e8847f61f72ca0cc13d1a65406f595d157d11eb",
+    "data/processed/counties/24023.json": "677f8ff022be88e1fcaad130a367e4deb963349cc958e0781555e7e130db7763",
+    "data/processed/counties/24035.json": "09fde41381cdacc6aed920a7f82d10651b7bb3ecf499478df66236f3c34c2c32",
+    "data/processed/counties/24019.json": "e35ddba4de3304fc4fcea11ccef61a068c8a9c17774a93a9120251b3c62ef2cb",
+    "data/processed/counties/24041.json": "6b744469ff8d9e12ec492cc56e4ad7e4380caff5a1dac2857948b72641dc816c",
+    "data/processed/counties/24001.json": "c04a2ba08681389b8454b6da99d5c07e768dd2542aba6f2d364de208c23750db",
+    "data/processed/counties/24017.json": "4dbef30b125e8327b08c2db3faf0619461823e774c4f91a3e9346f94fc2adb09",
+    "data/processed/counties/24037.json": "c7427abd4460e5783f4dd95d9c60dcbbf4f79ae970bd442053a5b2a487543473",
+    "data/processed/counties/24021.json": "a04616fa8bec4eafaf31dfeeb2b82d83c1c477bf80e86ab3b3e142f446edc814",
+    "data/processed/counties/24047.json": "4e46c84b4345a92dffba2a0810466a0e6cc734b0064749653e44390de2b6fc7a",
+    "data/processed/counties/24031.json": "023bff01435d03a695e1d57c7edb86910cdda4a6e7f65d12f761e369a2a5ef3d",
+    "data/processed/counties/24027.json": "090513831338b6a7599ae360406da0091df94818822fb380a817be0e1f678b27",
+    "data/processed/counties/24011.json": "d3a6e56a5aadb1972328d175920b0ba932aa69c83ffa6df552f51c859a4f3da4",
+    "data/processed/wildfire/counties/24045.json": "1963bb2b07ef7bc8da7e7e1770c8859c72aaede9b153886bfd85bed3a1183308",
+    "data/processed/wildfire/counties/24025.json": "b0c28d1f4782a82da114ad64d741139cd233c3197482849be6a36ec56d42329d",
+    "data/processed/wildfire/counties/24033.json": "b304078c8bb54afd00b3df0f1c93a6e6adf1b2ea013d8bfab1f5c677166ae57c",
+    "data/processed/wildfire/counties/24009.json": "2b48a4da3d73a2e9a8fce3e2c5d115709b23fd8dc08a3ee51a2b4557a194693e",
+    "data/processed/wildfire/counties/24029.json": "da0c2a8241b36cd65adf12a3ad8bdfe85abff9a6448ecf9bac7978ee66a43ed6",
+    "data/processed/wildfire/counties/24013.json": "e74b2c1858776dd9b16e7ec163cce3d5a79b10397cd74570661d06339b640880",
+    "data/processed/wildfire/counties/24510.json": "ae46f35593ba8f2cad522b55a639cfe441945f1436ebffd6b50ee729238202b6",
+    "data/processed/wildfire/counties/24005.json": "1c53a6c7cb538a955b98e6e3153af4ee92812e9441e1eff6145fd6b6a58d7ced",
+    "data/processed/wildfire/counties/24043.json": "50078936fc5272b9f531b8cbd7c913572c9b3ab0ff75207e8b79bdfecd764f80",
+    "data/processed/wildfire/counties/24039.json": "3832cfe76de755f7213184b5674f7c309985fa4b97de2ab37e5bced11318e475",
+    "data/processed/wildfire/counties/24015.json": "2562222e9cfbb21e5eebc4590e7c79fcd1978cc8b167bf101e0182fe2d09ca14",
+    "data/processed/wildfire/counties/24003.json": "78d3b6b45d208a17ac2834b8d93f6c1537e31a0c0e9b356fed136ece1364c403",
+    "data/processed/wildfire/counties/24023.json": "2d932d79ad6319c7073d48f59076ab00e3f704220f9f97c7d5e9fd24ed421580",
+    "data/processed/wildfire/counties/24035.json": "7782f618982f6e7d86b9da9fd167d193ad8428f978b995980c64dcbd5610894f",
+    "data/processed/wildfire/counties/24019.json": "8d55195185dcbfdd7165fbacc3b83cc9fe4b18d4cbc70e5fc377f9d70b45b09c",
+    "data/processed/wildfire/counties/24041.json": "05bb3eab0b65fa6902531b3f4c857f5ff0b0926ab22d55001b50ac9a4bdbe9b4",
+    "data/processed/wildfire/counties/24001.json": "6476c22f3e4d5d67576d3953fc7107f801f536000d6190389bc9fe7b776afa6f",
+    "data/processed/wildfire/counties/24017.json": "7bfaf1f885afc2786966e0400b631d3f7ec002489e23314570fb22cf9432de0d",
+    "data/processed/wildfire/counties/24037.json": "f7fed20f1667cc4ca68478b1493ff2948dc5000b50aef60fe5cf8d942f1890de",
+    "data/processed/wildfire/counties/24021.json": "2652138c9588ce50ecabe86817d2c32b97f7e2f3993eb5c3ce2d85c3732a70df",
+    "data/processed/wildfire/counties/24047.json": "4160a453f4ceaf2fa6f8dc867fa7af00539afa1f68aa057ccd6906033e8bb3ab",
+    "data/processed/wildfire/counties/24031.json": "ab8c834c6e2ffd2bae8fdecde2014a40b3d8349e5befbcc192569d0b9dde8789",
+    "data/processed/wildfire/counties/24027.json": "e55875decf43fc3ae39eced374d79d59b6621f5927d81c70dc04a6aeed1447db",
+    "data/processed/wildfire/counties/24011.json": "972922df82c6b969d3804059dcd132d7995789d6d02aeca7cdc9a8cca08cb616",
+    "pipeline/process_maryland_flood.py": "ec4271c49b1a578e09a7c6462043b1ad2c9b7cdb13d872e3dda8d858de248070",
+    "pipeline/process_maryland_wildfire.py": "3891276d8eb26520bd19705386673be8b42db75ee35174ef7fe43b97d6f35060"
+  },
+  "evidence_pin": {
+    "file": "docs/audits/md-de-five-year-feasibility/supplemental-metadata.json",
+    "sha256": "5e7d3b1cfb42d988e7cc12c290742c275259120fff2f9c464eaae674bc328ac8",
+    "bytes": 594617
+  },
+  "baselines": {
+    "nri": {
+      "status": "cached_bytes_pinned",
+      "versions": [
+        "December 2025"
+      ],
+      "county_count": 3232,
+      "assets": [
+        {
+          "file": "data/cache/national-current/38/384f51b792841094a5119c6368dd28a2fe3502b9a995281019bd207bc829ede8.request.json",
+          "sha256": "75087cc68cfde85ff400d958ee7f5d9a8e744067832e5ace05b996b6c7a985a9",
+          "bytes": 5418
+        },
+        {
+          "file": "data/cache/national-current/38/384f51b792841094a5119c6368dd28a2fe3502b9a995281019bd207bc829ede8.gz",
+          "sha256": "8e6f7b98b159c621a8ed5fdbf1b224c546c43355cf8d8ac20d253a3492604759",
+          "bytes": 21074
+        },
+        {
+          "file": "data/cache/national-current/41/41477532c132f853c81fb5e94dc13d1bedb2c5824c196c4e5d6dc47afad360d4.request.json",
+          "sha256": "33835fd65a93392b90c1098eef408c48de4233b2c782be82ddca741237a9fd23",
+          "bytes": 1569
+        },
+        {
+          "file": "data/cache/national-current/41/41477532c132f853c81fb5e94dc13d1bedb2c5824c196c4e5d6dc47afad360d4.gz",
+          "sha256": "0eaaae3f609740d886cf4a865b88940fab3eb2b8a96b2e9a0a1af8a725728082",
+          "bytes": 4481
+        },
+        {
+          "file": "data/cache/national-current/55/55c267d11989eb9ed154c86aae741e7ba4764fa0f909382526b56307da87051a.request.json",
+          "sha256": "e906ae197095f75a47dea607515b43eac20e361542aafb6070515852335a5140",
+          "bytes": 5419
+        },
+        {
+          "file": "data/cache/national-current/55/55c267d11989eb9ed154c86aae741e7ba4764fa0f909382526b56307da87051a.gz",
+          "sha256": "0e06e225010c297b76478cbb29c3d80c3410faa821bbf60883dd7ae18d812041",
+          "bytes": 20833
+        },
+        {
+          "file": "data/cache/national-current/91/913d8873e09f452d6c08bc668807abfdb1a8728bf91530282975756a33ce31c2.request.json",
+          "sha256": "05ee39b90c226dea436d898ca42ead304fef550d3e810783523dfdeff879547e",
+          "bytes": 4311
+        },
+        {
+          "file": "data/cache/national-current/91/913d8873e09f452d6c08bc668807abfdb1a8728bf91530282975756a33ce31c2.gz",
+          "sha256": "1de41f01bb78d26053315c9f03316ca6dfccd030ee96d24958ec4af40f3fd385",
+          "bytes": 20839
+        },
+        {
+          "file": "data/cache/national-current/bd/bd04e353c5520dda45006d33b0280ec797a748065644cc8004bcd907136672a9.request.json",
+          "sha256": "f2d01afd0285dcb34ae885f6c0dd649644da0bb8f3b90e66396d84b394729d24",
+          "bytes": 5410
+        },
+        {
+          "file": "data/cache/national-current/bd/bd04e353c5520dda45006d33b0280ec797a748065644cc8004bcd907136672a9.gz",
+          "sha256": "a1a9b9f389bbf6959f5c66268f6ca783bb58b0e158163f730903d48dc766b8e0",
+          "bytes": 21074
+        },
+        {
+          "file": "data/cache/national-current/d0/d03ec5b194dd4b7281dc08aebb63e09feeef7cedfcbc7f660afb76cfe645d43c.request.json",
+          "sha256": "56918fefcee4bc3b891fd1b75902072abe9b393d3b082a1c49851cc9a54832dd",
+          "bytes": 4318
+        },
+        {
+          "file": "data/cache/national-current/d0/d03ec5b194dd4b7281dc08aebb63e09feeef7cedfcbc7f660afb76cfe645d43c.gz",
+          "sha256": "2a1101902cf7e0d13b38b6975555ded363e5f2b69d2343da0ea5376e788956f0",
+          "bytes": 20839
+        },
+        {
+          "file": "data/cache/national-current/df/dfd9e8c94ee70464c740123f8e86d26ebcf505b6873b44ad60a235952be11f03.request.json",
+          "sha256": "dd015e1044bdb3b133d248c4f4698b4f869784e99601bb5e3958a5b4fa024bbc",
+          "bytes": 5410
+        },
+        {
+          "file": "data/cache/national-current/df/dfd9e8c94ee70464c740123f8e86d26ebcf505b6873b44ad60a235952be11f03.gz",
+          "sha256": "8cd24107e7ccb7518eb19aa43afb46ca698fc66e3c813279f2ad39150b086c97",
+          "bytes": 20833
+        },
+        {
+          "file": "data/cache/national-current/fe/feb1d7da1d4739f4a859e7d3890035789b9235e09fd96af2c303fe9dcd776f98.request.json",
+          "sha256": "de74d18310417522d22e01efd5744b3313510875a6594335654e5fd1b4b366f1",
+          "bytes": 1579
+        },
+        {
+          "file": "data/cache/national-current/fe/feb1d7da1d4739f4a859e7d3890035789b9235e09fd96af2c303fe9dcd776f98.gz",
+          "sha256": "e259b7f4b095b4be6c42bfd0a6bb637440410bc8463974593235c239018e700f",
+          "bytes": 4481
+        }
+      ],
+      "national_frequency_reference": {
+        "flood": {
+          "field": "IFLD_AFREQ",
+          "min": 0,
+          "max": 12.964285714285714,
+          "valid_count": 3232,
+          "fixed_across_years": true
+        },
+        "wildfire": {
+          "field": "WFIR_AFREQ",
+          "min": 0,
+          "max": 0.0315816713751726,
+          "valid_count": 3144,
+          "fixed_across_years": true
+        }
+      },
+      "pilot_county_frequency_values": {
+        "24001": {
+          "IFLD_AFREQ": 2,
+          "WFIR_AFREQ": 0.0002128234837200973,
+          "NRI_VER": "December 2025"
+        },
+        "24003": {
+          "IFLD_AFREQ": 3.642857142857143,
+          "WFIR_AFREQ": 9.072608859543402e-05,
+          "NRI_VER": "December 2025"
+        },
+        "24005": {
+          "IFLD_AFREQ": 5.642857142857143,
+          "WFIR_AFREQ": 1.7691462807991912e-05,
+          "NRI_VER": "December 2025"
+        },
+        "24009": {
+          "IFLD_AFREQ": 1.1428571428571428,
+          "WFIR_AFREQ": 0.000745455251531389,
+          "NRI_VER": "December 2025"
+        },
+        "24011": {
+          "IFLD_AFREQ": 0.8214285714285714,
+          "WFIR_AFREQ": 0.001109870877865764,
+          "NRI_VER": "December 2025"
+        },
+        "24013": {
+          "IFLD_AFREQ": 2.7142857142857144,
+          "WFIR_AFREQ": 1.2865106046518465e-05,
+          "NRI_VER": "December 2025"
+        },
+        "24015": {
+          "IFLD_AFREQ": 2.5,
+          "WFIR_AFREQ": 0.00018386078533751254,
+          "NRI_VER": "December 2025"
+        },
+        "24017": {
+          "IFLD_AFREQ": 1.6785714285714286,
+          "WFIR_AFREQ": 0.00017824271173543218,
+          "NRI_VER": "December 2025"
+        },
+        "24019": {
+          "IFLD_AFREQ": 0.6785714285714286,
+          "WFIR_AFREQ": 0.003491753615870603,
+          "NRI_VER": "December 2025"
+        },
+        "24021": {
+          "IFLD_AFREQ": 4.678571428571429,
+          "WFIR_AFREQ": 7.184335809125044e-05,
+          "NRI_VER": "December 2025"
+        },
+        "24023": {
+          "IFLD_AFREQ": 1.9642857142857142,
+          "WFIR_AFREQ": 0.00024913385786674586,
+          "NRI_VER": "December 2025"
+        },
+        "24025": {
+          "IFLD_AFREQ": 2.892857142857143,
+          "WFIR_AFREQ": 2.0607281465455036e-05,
+          "NRI_VER": "December 2025"
+        },
+        "24027": {
+          "IFLD_AFREQ": 2.5714285714285716,
+          "WFIR_AFREQ": 2.7793079620852073e-05,
+          "NRI_VER": "December 2025"
+        },
+        "24029": {
+          "IFLD_AFREQ": 0.75,
+          "WFIR_AFREQ": 0.000245260578019461,
+          "NRI_VER": "December 2025"
+        },
+        "24031": {
+          "IFLD_AFREQ": 5.464285714285714,
+          "WFIR_AFREQ": 2.5709683733421305e-05,
+          "NRI_VER": "December 2025"
+        },
+        "24033": {
+          "IFLD_AFREQ": 4.178571428571429,
+          "WFIR_AFREQ": 8.055184289440897e-05,
+          "NRI_VER": "December 2025"
+        },
+        "24035": {
+          "IFLD_AFREQ": 1.1785714285714286,
+          "WFIR_AFREQ": 0.0006595041506130069,
+          "NRI_VER": "December 2025"
+        },
+        "24037": {
+          "IFLD_AFREQ": 2.5714285714285716,
+          "WFIR_AFREQ": 0.0006980877489093679,
+          "NRI_VER": "December 2025"
+        },
+        "24039": {
+          "IFLD_AFREQ": 0.4642857142857143,
+          "WFIR_AFREQ": 0.004239857942936136,
+          "NRI_VER": "December 2025"
+        },
+        "24041": {
+          "IFLD_AFREQ": 0.7857142857142857,
+          "WFIR_AFREQ": 0.0014374310374647994,
+          "NRI_VER": "December 2025"
+        },
+        "24043": {
+          "IFLD_AFREQ": 2.107142857142857,
+          "WFIR_AFREQ": 0.00012425679921126997,
+          "NRI_VER": "December 2025"
+        },
+        "24045": {
+          "IFLD_AFREQ": 0.7142857142857143,
+          "WFIR_AFREQ": 0.0024507868921060287,
+          "NRI_VER": "December 2025"
+        },
+        "24047": {
+          "IFLD_AFREQ": 0.8571428571428571,
+          "WFIR_AFREQ": 0.0012101951671798796,
+          "NRI_VER": "December 2025"
+        },
+        "24510": {
+          "IFLD_AFREQ": 1.8928571428571428,
+          "WFIR_AFREQ": 9.988798448407709e-06,
+          "NRI_VER": "December 2025"
+        },
+        "10001": {
+          "IFLD_AFREQ": 1.3928571428571428,
+          "WFIR_AFREQ": 0.0008500351409148583,
+          "NRI_VER": "December 2025"
+        },
+        "10003": {
+          "IFLD_AFREQ": 6.571428571428571,
+          "WFIR_AFREQ": 0.0004833369263208969,
+          "NRI_VER": "December 2025"
+        },
+        "10005": {
+          "IFLD_AFREQ": 2.5357142857142856,
+          "WFIR_AFREQ": 0.0009866149893127338,
+          "NRI_VER": "December 2025"
+        }
+      },
+      "maryland_compatibility": [
+        {
+          "geoid": "24001",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24001",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24003",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24003",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24005",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24005",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24009",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24009",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24011",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24011",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24013",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24013",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24015",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24015",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24017",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24017",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24019",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24019",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24021",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24021",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24023",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24023",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24025",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24025",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24027",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24027",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24029",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24029",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24031",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24031",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24033",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24033",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24035",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24035",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24037",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24037",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24039",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24039",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24041",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24041",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24043",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24043",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24045",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24045",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24047",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24047",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24510",
+          "hazard": "flood",
+          "frequency_matches_saved_baseline": true
+        },
+        {
+          "geoid": "24510",
+          "hazard": "wildfire",
+          "frequency_matches_saved_baseline": true
+        }
+      ]
+    },
+    "whp": {
+      "metric": "WHP2023 High/Very High classes 4/5; end-2020 landscape conditions",
+      "status": "maryland_rasters_pinned_delaware_pending",
+      "maryland_rasters": [
+        {
+          "file": "data/cache/wildfire/whp2023/24/24001/66643797dac0cdab2997c97b89313abccb507ce0c5c95595986f0d9b6705ebb7.tif",
+          "sha256": "1438af2f80a6c308d990373eeebc5ea88c5832d4653ceaa68676b05026477271",
+          "bytes": 99486
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24003/81b247e5fc0a9523d4dc0886d6a643b7904a4dd4a96a343543435e2471b7dc2a.tif",
+          "sha256": "7efa8bab9c97140dff0d63fe028b53c5347635826f37cdf8637095267b30a3aa",
+          "bytes": 99486
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24005/9c6c5a61655e1b2153179689d2d2ba0640e7e2457a6db5d61fd38716a0679bc9.tif",
+          "sha256": "f9dd59442ad3b9581de5dd950a986f8ab4b9297b4fd6ec43cd87ca445f54f88e",
+          "bytes": 99486
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24009/94d9bf0097ddc0957e69de3cf9a47fb77232da94b0d28ba5daa4499896a7d679.tif",
+          "sha256": "d3c1145405a586db5221fbf9fbeb5b7b7cae9ef47aa2172e6708ffbc921ab69e",
+          "bytes": 66706
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24011/232cfd6fe12b9a666e203be4fa4a2f2bdedddfe05d299b3a890fb6f5e2645c9b.tif",
+          "sha256": "bab39e5222b046d3ee090af68e230cd15e17ded1539909e1e1e6aa4dddd90897",
+          "bytes": 50316
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24013/866c79530bf449b536683d107cca60f2f22cd5dfb57bc4e159488daad4f6ace7.tif",
+          "sha256": "d662b6e93af1e43bee9c8dd197b71b4404d4807f81d6330ab45cd952d6a2d086",
+          "bytes": 66706
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24015/a6091294aae53fec5d581815ac52a4ae87f7e0a5f40ec54119386968ce8aa760.tif",
+          "sha256": "af72fa8e024b3bc255a552d22af93d31b786a6bd08324a688c944105afc4ef00",
+          "bytes": 66706
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24017/6512aa76faec706995cadb30a5b2f782e82091391175e135bed194b5e5d263ef.tif",
+          "sha256": "08fc2aa611ef8c59ec8cfe06ecab44c789cb4928eb76c3b133f24c69c77c31ef",
+          "bytes": 148656
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24019/8762cafec051f499b1a1c6192ab2eae06a03726ae759e161e45555f0b6aa9195.tif",
+          "sha256": "a679cde23d5a71460d1ee0a60a391844574776833815ed9d11ead798ad643cfa",
+          "bytes": 148656
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24021/e209c9bb62c0bc235eefe7fe55271e7c61a5ba5b6b40629eda1beea4006870bb.tif",
+          "sha256": "b2880a121270539e9a867a6c662c6031b9c47431d1826ec365bf86ada8550c8e",
+          "bytes": 99486
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24023/2add9dc37a58e584469d893038c1993190224670fca2f30bf863110d89753293.tif",
+          "sha256": "c5ab63f0d34c9da20c6ad737b74151138c4e9e30db6f29e6e0e8315efc747265",
+          "bytes": 99486
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24025/8f478b75e39dee199806a829393a22cde7a97aa10e5a54e7485ad13c6907822d.tif",
+          "sha256": "79e1f3bb2497c37817198950608189d3dbfbed55ce7a205eb6166d99decf8dec",
+          "bytes": 66706
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24027/8d9269c66a5888044adafbff62189eb1be7eaa8c01bfefdb54a069306c842124.tif",
+          "sha256": "09e98cb9fed25ba2c4b05ab7ef98588cc7694594eb44272f99b4ff9c07a8c6a6",
+          "bytes": 66706
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24029/1908eb2a54ad01924bd128f3828e7fe8479fe25b98437826c5e7f95c17f943e6.tif",
+          "sha256": "2450f459a54a6c2ca5fd199e4233a96c33b2cd1adcde833ba729eca20c3afab5",
+          "bytes": 66706
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24031/9eda9803bcc438265b8f50106905e11e317a32408e8d70ef25e4482301e2f6a0.tif",
+          "sha256": "84850072e82298f27ce888042abb4feea0904747cef280849edb8b84c304bd14",
+          "bytes": 99486
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24033/049565d0d8c2ce291d6065cf17bcac21962e9ba6b17462cfec64a840bacf9194.tif",
+          "sha256": "09dae5fa414db530cde529601c1391c47ba807109f48c6e9f2e3431429eb55c7",
+          "bytes": 99486
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24035/463ba34597a8ffd14e019a222d17143c99f580268098bc036fdf263cb2f0eac5.tif",
+          "sha256": "2f69d16f39f3f28c1ec63fd11f997bd1cc5fdc3deaab16128b6a44e88e981439",
+          "bytes": 99486
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24037/bf343db7f5a85c27346cf739ca866ef434221fe6a7c8e3ffc1817f1e7f2c9a29.tif",
+          "sha256": "bb0157d98eaa4df065fad1b86f3c7fa180f88268cd6d80d0971c023ecd8b6459",
+          "bytes": 148656
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24039/ac280c5f9702aa6a0cbf377ebecfda1df49fb99f82479f4afe19487f56236a43.tif",
+          "sha256": "f4e079ab3d609fb60ccea79d45e4e237a700c843f4846dc03001765e65022ce2",
+          "bytes": 99486
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24041/fcb3fb40d2472ec9bd64492e90491a350968f1bc0f0428c5e02d8965899bf9a0.tif",
+          "sha256": "9f28cf4bab41182a19147f8844edd34b454198937f7ca937df5f92255cecbbbf",
+          "bytes": 66706
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24043/e96137fce69b4b5afac2adbe11def7e79c30dfd1a3f38bba1809b807a412801c.tif",
+          "sha256": "88a08875d39cc3cb0396b29df06efa0d06ae7b5a30a2a9f6dd75f15629257979",
+          "bytes": 99486
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24045/83a5f8f8ad066ec0175c17d5e172d20e3cb01d904bbda6dac6383272444710f1.tif",
+          "sha256": "c92ff6be7d6f8c01ce5e4bd87653cf963b4551795329472afe40d85a2c71622e",
+          "bytes": 99486
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24047/829411930d31e396dd264edf221b40e23795106639be3d4a7ec5b1857417a8f5.tif",
+          "sha256": "84ab30a1100917eaec03b548c5610fc96baeee254ad9b192a0ef3bac24c7aeb0",
+          "bytes": 99486
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24510/83137cfdd69f6b13c9bd024f2b3e748378943ba1163004d3cc5a2eea50247235.tif",
+          "sha256": "6a350a322f2a1f827b6186555a669049565a3df32f1336c36040742e9d9f2c1c",
+          "bytes": 17530
+        }
+      ],
+      "export_request_pins": [
+        {
+          "file": "data/cache/wildfire/whp2023/24/24001/66643797dac0cdab2997c97b89313abccb507ce0c5c95595986f0d9b6705ebb7.request.json",
+          "sha256": "e4ff65af6113c89963379fa3c563c85d63e3828e94e27b3f4ffa401d34ee54cf",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24003/81b247e5fc0a9523d4dc0886d6a643b7904a4dd4a96a343543435e2471b7dc2a.request.json",
+          "sha256": "1999c8431541f3cc75152b0dc08af3e1d0e228d69ad85475811edd8de5e13f75",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24005/9c6c5a61655e1b2153179689d2d2ba0640e7e2457a6db5d61fd38716a0679bc9.request.json",
+          "sha256": "8d32389cf8997b01ce45d81da04b86d147632f9d5139bbdd228fcf95a9c565fc",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24009/94d9bf0097ddc0957e69de3cf9a47fb77232da94b0d28ba5daa4499896a7d679.request.json",
+          "sha256": "7a75d9fa2556963d693aaabb1d1c51bf3668ede77d1b882b81066cabfdb67948",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24011/232cfd6fe12b9a666e203be4fa4a2f2bdedddfe05d299b3a890fb6f5e2645c9b.request.json",
+          "sha256": "fc94ac2aa470db27f9ecbbf79fefecb53827efbe86dcce49c78f8cd2e3c84b07",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24013/866c79530bf449b536683d107cca60f2f22cd5dfb57bc4e159488daad4f6ace7.request.json",
+          "sha256": "c1bd77de956cbd57f7212a977f51820f8d4212e6ae84953013d0fe1cbc2e31ca",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24015/a6091294aae53fec5d581815ac52a4ae87f7e0a5f40ec54119386968ce8aa760.request.json",
+          "sha256": "75862ced6a593ce1feb31b19e1abf727081fe641fc64282d0080df4977aaf675",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24017/6512aa76faec706995cadb30a5b2f782e82091391175e135bed194b5e5d263ef.request.json",
+          "sha256": "9708dd6e333994d9af9221e2558919588525158e652e31886dd600b16d796b8f",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24019/8762cafec051f499b1a1c6192ab2eae06a03726ae759e161e45555f0b6aa9195.request.json",
+          "sha256": "25b5fe0f6b5fd4c4c6c81ae6cca5dac19fb0380e3a0d1841020a594ba97f1dc2",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24021/e209c9bb62c0bc235eefe7fe55271e7c61a5ba5b6b40629eda1beea4006870bb.request.json",
+          "sha256": "f8583a61e8bfedaa902e3ad71dc1549372d0558e8a069c6a1db98077a24e5470",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24023/2add9dc37a58e584469d893038c1993190224670fca2f30bf863110d89753293.request.json",
+          "sha256": "fcc1252c95a2bc36ac37c9a4939bbc4dfdd55b3917b65136a06b527e0c7af81e",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24025/8f478b75e39dee199806a829393a22cde7a97aa10e5a54e7485ad13c6907822d.request.json",
+          "sha256": "f4e6ff7c4f898f074a8e38f71d046b8b881ce211f83198caaced797820092ed3",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24027/8d9269c66a5888044adafbff62189eb1be7eaa8c01bfefdb54a069306c842124.request.json",
+          "sha256": "2ea486ecbf39008ee0540f834ff02710785f749c879fe5bf7f10d2710b3a39a6",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24029/1908eb2a54ad01924bd128f3828e7fe8479fe25b98437826c5e7f95c17f943e6.request.json",
+          "sha256": "c940d5382a3666e1f47ece2a17fda95fa3f78a2d0696cd8295d53e0d1086c992",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24031/9eda9803bcc438265b8f50106905e11e317a32408e8d70ef25e4482301e2f6a0.request.json",
+          "sha256": "adab02976a59deac28dd8f1ba7de90e0226e8a95213b4a9630d328409193e38c",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24033/049565d0d8c2ce291d6065cf17bcac21962e9ba6b17462cfec64a840bacf9194.request.json",
+          "sha256": "34a6124a20578ad5d27fe6e01f42493c22f2c9717253a4cd6686b19739b9d4ba",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24035/463ba34597a8ffd14e019a222d17143c99f580268098bc036fdf263cb2f0eac5.request.json",
+          "sha256": "34e131ea2df2e20ec126d262f16276ce685f3403f464abd606b70a34fcda46c6",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24037/bf343db7f5a85c27346cf739ca866ef434221fe6a7c8e3ffc1817f1e7f2c9a29.request.json",
+          "sha256": "5e5f3a42783dc50473bcd1b721b93800a28cf1207b686a7c855b48a088eabf49",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24039/ac280c5f9702aa6a0cbf377ebecfda1df49fb99f82479f4afe19487f56236a43.request.json",
+          "sha256": "39eab1fb4bd6ccd95ff47f804ee54e5719c14de6d8cc9b991a0a6a1e984c1ee7",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24041/fcb3fb40d2472ec9bd64492e90491a350968f1bc0f0428c5e02d8965899bf9a0.request.json",
+          "sha256": "18f35deeec6d88f325b21c80fd55abd6a85464e906e324ec500be52da0124e15",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24043/e96137fce69b4b5afac2adbe11def7e79c30dfd1a3f38bba1809b807a412801c.request.json",
+          "sha256": "330185ac357e2898cac2eacf9d2dc42e8dd1cc9ef306c59899c326364d05c404",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24045/83a5f8f8ad066ec0175c17d5e172d20e3cb01d904bbda6dac6383272444710f1.request.json",
+          "sha256": "c879ea078926359b549f51ead2c8117081dc65d68e82369c3dc45de7f6e3e11d",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24047/829411930d31e396dd264edf221b40e23795106639be3d4a7ec5b1857417a8f5.request.json",
+          "sha256": "e31cf7274967bcf45a963e9c8c6069f95dc9e7ecdde788e5b043e78a4b528dcd",
+          "bytes": 485
+        },
+        {
+          "file": "data/cache/wildfire/whp2023/24/24510/83137cfdd69f6b13c9bd024f2b3e748378943ba1163004d3cc5a2eea50247235.request.json",
+          "sha256": "ff62b4b500378e3eb204564e824a787025044aa197cd59937baf1b7bf00abe09",
+          "bytes": 483
+        }
+      ],
+      "service_metadata_pins": [
+        {
+          "file": "data/cache/wildfire/whp2023/24/metadata/5a2282a080ae09e3ba5df3274f9783abfb3e7153373f198bad74e5a0c4c51631.json",
+          "sha256": "537508a6704bfddfe9aee7825af310bb98e9bf67d39f36c746e08b1587b8be47",
+          "bytes": 13387
+        }
+      ],
+      "delaware_complete_coverage_pin": null
+    },
+    "nfhl": {
+      "metric": "SFHA_TF='T'; retain current coastal/tidal classes",
+      "status": "original_maryland_geometry_unavailable_snapshot_required",
+      "complete_md_de_geometry_pin": null
+    }
+  },
+  "normalization": {
+    "frequency": "one pinned national min/max per hazard for all five years",
+    "consequence": "fixed national reference proposed for Gina; no within-year or MD/DE-only ranking",
+    "national_consequence_reference_pin": null,
+    "annual_normalized_consequence": null,
+    "annual_stress": null
+  },
+  "prior_geometry_audit_pin": {
+    "file": "docs/audits/maryland-history-2020-2022/audit-report.md",
+    "sha256": "00bb70e9352b60f2a986ede2f772523077c4b33549756c98ebaa8c1e9c8f2b02",
+    "bytes": 5296
+  },
+  "annual_inputs": [
+    {
+      "state": "MD",
+      "year": 2021,
+      "roads_url": "https://www2.census.gov/geo/tiger/TIGER2021/PRISECROADS/tl_2021_24_prisecroads.zip",
+      "roads_local_pin": {
+        "file": "data/cache/historical-audit/maryland-2020-2022/tl_2021_24_prisecroads.zip",
+        "sha256": "050c43ffedfceb6a79ca469e806c09cc3cf225a9864dec747aed9c41a8cc825d",
+        "bytes": 5178078
+      },
+      "roads_validation": "prior_source_hash_and_zip_crc_match",
+      "traffic_url": "https://services.arcgis.com/njFNhDsUCentVYJW/arcgis/rest/services/MDOT_SHA_Annual_Average_Daily_Traffic/FeatureServer/1",
+      "traffic_role": "state_supplement_candidate_for_overlap_validation_not_selected",
+      "primary_traffic_source": "annual HPMS where available; 2025 unverified",
+      "aadt_field": "AADT_2021",
+      "aadt_estimate_year": 2021,
+      "positive_traffic_source_records": 9939,
+      "traffic_payload_pin": null,
+      "traffic_geometry_comparability": "unvalidated",
+      "exposed_road_traffic_coverage": null
+    },
+    {
+      "state": "MD",
+      "year": 2022,
+      "roads_url": "https://www2.census.gov/geo/tiger/TIGER2022/PRISECROADS/tl_2022_24_prisecroads.zip",
+      "roads_local_pin": {
+        "file": "data/cache/historical-audit/maryland-2020-2022/tl_2022_24_prisecroads.zip",
+        "sha256": "7c830e2523287dd79ae506ad5d5c3ae3aa6d3035f41d24a9c80440c34f6dd53b",
+        "bytes": 5237932
+      },
+      "roads_validation": "prior_source_hash_and_zip_crc_match",
+      "traffic_url": "https://services.arcgis.com/njFNhDsUCentVYJW/arcgis/rest/services/MDOT_SHA_Annual_Average_Daily_Traffic/FeatureServer/1",
+      "traffic_role": "state_supplement_candidate_for_overlap_validation_not_selected",
+      "primary_traffic_source": "annual HPMS where available; 2025 unverified",
+      "aadt_field": "AADT_2022",
+      "aadt_estimate_year": 2022,
+      "positive_traffic_source_records": 9939,
+      "traffic_payload_pin": null,
+      "traffic_geometry_comparability": "unvalidated",
+      "exposed_road_traffic_coverage": null
+    },
+    {
+      "state": "MD",
+      "year": 2023,
+      "roads_url": "https://www2.census.gov/geo/tiger/TIGER2023/PRISECROADS/tl_2023_24_prisecroads.zip",
+      "roads_local_pin": null,
+      "roads_validation": "payload_not_acquired",
+      "traffic_url": "https://services.arcgis.com/njFNhDsUCentVYJW/arcgis/rest/services/MDOT_SHA_Annual_Average_Daily_Traffic/FeatureServer/1",
+      "traffic_role": "state_supplement_candidate_for_overlap_validation_not_selected",
+      "primary_traffic_source": "annual HPMS where available; 2025 unverified",
+      "aadt_field": "AADT_2023",
+      "aadt_estimate_year": 2023,
+      "positive_traffic_source_records": 9941,
+      "traffic_payload_pin": null,
+      "traffic_geometry_comparability": "unvalidated",
+      "exposed_road_traffic_coverage": null
+    },
+    {
+      "state": "MD",
+      "year": 2024,
+      "roads_url": "https://www2.census.gov/geo/tiger/TIGER2024/PRISECROADS/tl_2024_24_prisecroads.zip",
+      "roads_local_pin": null,
+      "roads_validation": "payload_not_acquired",
+      "traffic_url": "https://services.arcgis.com/njFNhDsUCentVYJW/arcgis/rest/services/MDOT_SHA_Annual_Average_Daily_Traffic/FeatureServer/1",
+      "traffic_role": "state_supplement_candidate_for_overlap_validation_not_selected",
+      "primary_traffic_source": "annual HPMS where available; 2025 unverified",
+      "aadt_field": "AADT_2024",
+      "aadt_estimate_year": 2024,
+      "positive_traffic_source_records": 9947,
+      "traffic_payload_pin": null,
+      "traffic_geometry_comparability": "unvalidated",
+      "exposed_road_traffic_coverage": null
+    },
+    {
+      "state": "MD",
+      "year": 2025,
+      "roads_url": "https://www2.census.gov/geo/tiger/TIGER2025/PRISECROADS/tl_2025_24_prisecroads.zip",
+      "roads_local_pin": null,
+      "roads_validation": "payload_not_acquired",
+      "traffic_url": "https://services.arcgis.com/njFNhDsUCentVYJW/arcgis/rest/services/MDOT_SHA_Annual_Average_Daily_Traffic/FeatureServer/1",
+      "traffic_role": "state_supplement_candidate_for_overlap_validation_not_selected",
+      "primary_traffic_source": "annual HPMS where available; 2025 unverified",
+      "aadt_field": "AADT",
+      "aadt_estimate_year": 2025,
+      "positive_traffic_source_records": 10013,
+      "traffic_payload_pin": null,
+      "traffic_geometry_comparability": "unvalidated",
+      "exposed_road_traffic_coverage": null
+    },
+    {
+      "state": "DE",
+      "year": 2021,
+      "roads_url": "https://www2.census.gov/geo/tiger/TIGER2021/PRISECROADS/tl_2021_10_prisecroads.zip",
+      "roads_local_pin": null,
+      "roads_validation": "payload_not_acquired",
+      "traffic_url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Transportation/DE_Assets/FeatureServer/10",
+      "traffic_role": "state_supplement_candidate_for_overlap_validation_not_selected",
+      "primary_traffic_source": "annual HPMS where available; 2025 unverified",
+      "aadt_field": "AADT_LAST_YEAR_4",
+      "aadt_estimate_year": 2021,
+      "positive_traffic_source_records": 4070,
+      "traffic_payload_pin": null,
+      "traffic_geometry_comparability": "unvalidated",
+      "exposed_road_traffic_coverage": null
+    },
+    {
+      "state": "DE",
+      "year": 2022,
+      "roads_url": "https://www2.census.gov/geo/tiger/TIGER2022/PRISECROADS/tl_2022_10_prisecroads.zip",
+      "roads_local_pin": null,
+      "roads_validation": "payload_not_acquired",
+      "traffic_url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Transportation/DE_Assets/FeatureServer/10",
+      "traffic_role": "state_supplement_candidate_for_overlap_validation_not_selected",
+      "primary_traffic_source": "annual HPMS where available; 2025 unverified",
+      "aadt_field": "AADT_LAST_YEAR_3",
+      "aadt_estimate_year": 2022,
+      "positive_traffic_source_records": 4099,
+      "traffic_payload_pin": null,
+      "traffic_geometry_comparability": "unvalidated",
+      "exposed_road_traffic_coverage": null
+    },
+    {
+      "state": "DE",
+      "year": 2023,
+      "roads_url": "https://www2.census.gov/geo/tiger/TIGER2023/PRISECROADS/tl_2023_10_prisecroads.zip",
+      "roads_local_pin": null,
+      "roads_validation": "payload_not_acquired",
+      "traffic_url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Transportation/DE_Assets/FeatureServer/10",
+      "traffic_role": "state_supplement_candidate_for_overlap_validation_not_selected",
+      "primary_traffic_source": "annual HPMS where available; 2025 unverified",
+      "aadt_field": "AADT_LAST_YEAR_2",
+      "aadt_estimate_year": 2023,
+      "positive_traffic_source_records": 4113,
+      "traffic_payload_pin": null,
+      "traffic_geometry_comparability": "unvalidated",
+      "exposed_road_traffic_coverage": null
+    },
+    {
+      "state": "DE",
+      "year": 2024,
+      "roads_url": "https://www2.census.gov/geo/tiger/TIGER2024/PRISECROADS/tl_2024_10_prisecroads.zip",
+      "roads_local_pin": null,
+      "roads_validation": "payload_not_acquired",
+      "traffic_url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Transportation/DE_Assets/FeatureServer/10",
+      "traffic_role": "state_supplement_candidate_for_overlap_validation_not_selected",
+      "primary_traffic_source": "annual HPMS where available; 2025 unverified",
+      "aadt_field": "AADT_LAST_YEAR_1",
+      "aadt_estimate_year": 2024,
+      "positive_traffic_source_records": 4094,
+      "traffic_payload_pin": null,
+      "traffic_geometry_comparability": "unvalidated",
+      "exposed_road_traffic_coverage": null
+    },
+    {
+      "state": "DE",
+      "year": 2025,
+      "roads_url": "https://www2.census.gov/geo/tiger/TIGER2025/PRISECROADS/tl_2025_10_prisecroads.zip",
+      "roads_local_pin": null,
+      "roads_validation": "payload_not_acquired",
+      "traffic_url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Transportation/DE_Assets/FeatureServer/10",
+      "traffic_role": "state_supplement_candidate_for_overlap_validation_not_selected",
+      "primary_traffic_source": "annual HPMS where available; 2025 unverified",
+      "aadt_field": "CURRENT_AADT",
+      "aadt_estimate_year": 2025,
+      "positive_traffic_source_records": 4134,
+      "traffic_payload_pin": null,
+      "traffic_geometry_comparability": "unvalidated",
+      "exposed_road_traffic_coverage": null
+    }
+  ],
+  "jobs": [
+    {
+      "geoid": "24001",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24001",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24001",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24001",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24001",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24001",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24001",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24001",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24001",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24001",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24003",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24003",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24003",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24003",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24003",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24003",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24003",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24003",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24003",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24003",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24005",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24005",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24005",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24005",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24005",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24005",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24005",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24005",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24005",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24005",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24009",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24009",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24009",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24009",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24009",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24009",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24009",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24009",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24009",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24009",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24011",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24011",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24011",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24011",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24011",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24011",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24011",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24011",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24011",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24011",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24013",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24013",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24013",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24013",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24013",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24013",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24013",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24013",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24013",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24013",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24015",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24015",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24015",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24015",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24015",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24015",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24015",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24015",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24015",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24015",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24017",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24017",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24017",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24017",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24017",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24017",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24017",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24017",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24017",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24017",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24019",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24019",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24019",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24019",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24019",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24019",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24019",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24019",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24019",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24019",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24021",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24021",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24021",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24021",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24021",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24021",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24021",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24021",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24021",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24021",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24023",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24023",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24023",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24023",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24023",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24023",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24023",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24023",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24023",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24023",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24025",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24025",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24025",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24025",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24025",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24025",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24025",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24025",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24025",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24025",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24027",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24027",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24027",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24027",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24027",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24027",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24027",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24027",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24027",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24027",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24029",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24029",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24029",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24029",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24029",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24029",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24029",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24029",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24029",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24029",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24031",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24031",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24031",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24031",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24031",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24031",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24031",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24031",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24031",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24031",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24033",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24033",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24033",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24033",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24033",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24033",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24033",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24033",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24033",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24033",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24035",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24035",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24035",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24035",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24035",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24035",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24035",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24035",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24035",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24035",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24037",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24037",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24037",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24037",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24037",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24037",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24037",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24037",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24037",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24037",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24039",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24039",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24039",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24039",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24039",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24039",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24039",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24039",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24039",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24039",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24041",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24041",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24041",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24041",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24041",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24041",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24041",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24041",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24041",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24041",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24043",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24043",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24043",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24043",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24043",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24043",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24043",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24043",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24043",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24043",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24045",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24045",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24045",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24045",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24045",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24045",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24045",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24045",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24045",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24045",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24047",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24047",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24047",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24047",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24047",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24047",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24047",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24047",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24047",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24047",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24510",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24510",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24510",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24510",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24510",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24510",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24510",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24510",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24510",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "24510",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10001",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10001",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10001",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10001",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10001",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10001",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10001",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10001",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10001",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10001",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10003",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10003",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10003",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10003",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10003",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10003",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10003",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10003",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10003",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10003",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10005",
+      "year": 2021,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10005",
+      "year": 2021,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10005",
+      "year": 2022,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10005",
+      "year": 2022,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10005",
+      "year": 2023,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10005",
+      "year": 2023,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10005",
+      "year": 2024,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10005",
+      "year": 2024,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10005",
+      "year": 2025,
+      "hazard": "flood",
+      "status": "input_validation_pending",
+      "publishable": false
+    },
+    {
+      "geoid": "10005",
+      "year": 2025,
+      "hazard": "wildfire",
+      "status": "input_validation_pending",
+      "publishable": false
+    }
+  ],
+  "blockers": [
+    "Complete pinned NFHL geometry and mapped-coverage layers unavailable; original MD flood replay blocked.",
+    "Complete pinned Delaware WHP coverage not established.",
+    "Eight annual state road payloads not acquired; all annual traffic payloads unacquired.",
+    "Traffic geometry lineage, functional-class crosswalk and exposed-road coverage unvalidated.",
+    "DelDOT 2025 growth-factor change requires overlap-year comparison.",
+    "No complete fixed national consequence ranking reference; Gina review pending."
+  ]
+}

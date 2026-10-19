@@ -1,0 +1,422 @@
+{
+  "passed": true,
+  "county_count": 24,
+  "maryland_sha256_unchanged": true,
+  "wildfire_validation": "Actual frozen road/raster/frequency/traffic requests replayed for all 24 counties.",
+  "flood_validation": "Existing contracts checked and road total differences recorded against the wildfire replay. Existing flood/wildfire road totals differ in some counties; neither baseline was changed. Flood hazard/AADT source caches are absent; full flood-source recomputation has not been performed.",
+  "checks": [
+    {
+      "geoid": "24001",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24003",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24005",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24009",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24011",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.02680376880087465,
+      "shared_road_total_matches": false,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24013",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24015",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24017",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24019",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "hpms_coverage_pct_of_exposed_length": 0.0
+      }
+    },
+    {
+      "geoid": "24021",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.07662810710127133,
+      "shared_road_total_matches": false,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24023",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24025",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24027",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24029",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24031",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24033",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24035",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24037",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24039",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_consequence_raw_aadt": 0.0,
+        "hpms_coverage_pct_of_exposed_length": 0.0
+      }
+    },
+    {
+      "geoid": "24041",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24043",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24045",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_consequence_raw_aadt": 0.0,
+        "hpms_coverage_pct_of_exposed_length": 0.0
+      }
+    },
+    {
+      "geoid": "24047",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    },
+    {
+      "geoid": "24510",
+      "wildfire_frozen_source_replay_passed": true,
+      "flood_contract_passed": true,
+      "shared_road_total_difference_miles": 0.0,
+      "shared_road_total_matches": true,
+      "absolute_differences": {
+        "annualized_frequency": 0.0,
+        "normalized_frequency": 0.0,
+        "total_major_road_miles": 0.0,
+        "wildfire_exposed_major_road_miles": 0.0,
+        "transportation_exposure": 0.0,
+        "transportation_stress": 0.0
+      }
+    }
+  ],
+  "baseline_hashes": {
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24001.json": "c04a2ba08681389b8454b6da99d5c07e768dd2542aba6f2d364de208c23750db",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24003.json": "3d76b8fda8b16a9ed097ee1c7e8847f61f72ca0cc13d1a65406f595d157d11eb",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24005.json": "0310525b9081c6dda3a1564e25c8ec8576f2788073a7832a2cafe8083b5fc005",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24009.json": "9622462be20a9cb857b8872e443ed30626d8ddb5cd1bf1b59926a0f5c7561c1a",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24011.json": "d3a6e56a5aadb1972328d175920b0ba932aa69c83ffa6df552f51c859a4f3da4",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24013.json": "38bdd77777b396be79b8053ed21b9de9a9e8292eadbeea43447430d23232639f",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24015.json": "e7acf748e0b47304540da9caddb852d056a6ee945445b2de2626585bced38b32",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24017.json": "4dbef30b125e8327b08c2db3faf0619461823e774c4f91a3e9346f94fc2adb09",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24019.json": "e35ddba4de3304fc4fcea11ccef61a068c8a9c17774a93a9120251b3c62ef2cb",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24021.json": "a04616fa8bec4eafaf31dfeeb2b82d83c1c477bf80e86ab3b3e142f446edc814",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24023.json": "677f8ff022be88e1fcaad130a367e4deb963349cc958e0781555e7e130db7763",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24025.json": "f278f97ca2355e6364d11fbdf33dc8a43fb4dbf6e10e2250a28b5095b2ac68c3",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24027.json": "090513831338b6a7599ae360406da0091df94818822fb380a817be0e1f678b27",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24027_s1100_baseline.json": "7278e985f0fd4fd566aac3f7366e1a587c1e193362ea4bce9f6831f7649de31c",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24029.json": "cb88e395bb0d9b5f8edfdf5c0050df1c349a3a102639fff91b1a22c16a341738",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24031.json": "023bff01435d03a695e1d57c7edb86910cdda4a6e7f65d12f761e369a2a5ef3d",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24033.json": "b8698ce2961a3bb70b9f82b6e2a11ff44f5756f11bf0815b102c47a329afecce",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24035.json": "09fde41381cdacc6aed920a7f82d10651b7bb3ecf499478df66236f3c34c2c32",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24037.json": "c7427abd4460e5783f4dd95d9c60dcbbf4f79ae970bd442053a5b2a487543473",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24039.json": "57aef9ac5f399d8ac00ff34b4149583ea4f9152c67291b001ee3c30e719e7d3b",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24041.json": "6b744469ff8d9e12ec492cc56e4ad7e4380caff5a1dac2857948b72641dc816c",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24043.json": "0726f1506118d47c1aa0d83c7a136222f3a402b3751dea1c78839e185cac90e1",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24045.json": "a09e5f7ffe27f0653a02d00589427aaa342ab851db809a5743b15523898e7cdd",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24047.json": "4e46c84b4345a92dffba2a0810466a0e6cc734b0064749653e44390de2b6fc7a",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24510.json": "dbb300d894dfa9b215251112655101b42c64a964011520a8706ff2a169d28038",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24001.json": "6476c22f3e4d5d67576d3953fc7107f801f536000d6190389bc9fe7b776afa6f",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24003.json": "78d3b6b45d208a17ac2834b8d93f6c1537e31a0c0e9b356fed136ece1364c403",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24005.json": "1c53a6c7cb538a955b98e6e3153af4ee92812e9441e1eff6145fd6b6a58d7ced",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24009.json": "2b48a4da3d73a2e9a8fce3e2c5d115709b23fd8dc08a3ee51a2b4557a194693e",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24011.json": "972922df82c6b969d3804059dcd132d7995789d6d02aeca7cdc9a8cca08cb616",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24013.json": "e74b2c1858776dd9b16e7ec163cce3d5a79b10397cd74570661d06339b640880",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24015.json": "2562222e9cfbb21e5eebc4590e7c79fcd1978cc8b167bf101e0182fe2d09ca14",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24017.json": "7bfaf1f885afc2786966e0400b631d3f7ec002489e23314570fb22cf9432de0d",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24019.json": "8d55195185dcbfdd7165fbacc3b83cc9fe4b18d4cbc70e5fc377f9d70b45b09c",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24021.json": "2652138c9588ce50ecabe86817d2c32b97f7e2f3993eb5c3ce2d85c3732a70df",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24023.json": "2d932d79ad6319c7073d48f59076ab00e3f704220f9f97c7d5e9fd24ed421580",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24025.json": "b0c28d1f4782a82da114ad64d741139cd233c3197482849be6a36ec56d42329d",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24027.json": "e55875decf43fc3ae39eced374d79d59b6621f5927d81c70dc04a6aeed1447db",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24029.json": "da0c2a8241b36cd65adf12a3ad8bdfe85abff9a6448ecf9bac7978ee66a43ed6",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24031.json": "ab8c834c6e2ffd2bae8fdecde2014a40b3d8349e5befbcc192569d0b9dde8789",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24033.json": "b304078c8bb54afd00b3df0f1c93a6e6adf1b2ea013d8bfab1f5c677166ae57c",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24035.json": "7782f618982f6e7d86b9da9fd167d193ad8428f978b995980c64dcbd5610894f",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24037.json": "f7fed20f1667cc4ca68478b1493ff2948dc5000b50aef60fe5cf8d942f1890de",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24039.json": "3832cfe76de755f7213184b5674f7c309985fa4b97de2ab37e5bced11318e475",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24041.json": "05bb3eab0b65fa6902531b3f4c857f5ff0b0926ab22d55001b50ac9a4bdbe9b4",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24043.json": "50078936fc5272b9f531b8cbd7c913572c9b3ab0ff75207e8b79bdfecd764f80",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24045.json": "1963bb2b07ef7bc8da7e7e1770c8859c72aaede9b153886bfd85bed3a1183308",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24047.json": "4160a453f4ceaf2fa6f8dc867fa7af00539afa1f68aa057ccd6906033e8bb3ab",
+    "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24510.json": "ae46f35593ba8f2cad522b55a639cfe441945f1436ebffd6b50ee729238202b6"
+  }
+}

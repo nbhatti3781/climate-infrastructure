@@ -1,0 +1,64 @@
+{
+  "geoid": "01003",
+  "county": "Baldwin County",
+  "state": "Alabama",
+  "hazard": "wildfire",
+  "status": "traffic_coverage_incomplete",
+  "analysis_date": "2026-10-07",
+  "analysis_crs": "+proj=aeqd +lat_0=30.660970047256928 +lon_0=-87.74984055384331 +datum=NAD83 +units=m +no_defs +type=crs",
+  "road_scope": "Census TIGERweb Major Roads (MTFCC S1100 + S1200 \u2014 MapServer layers 2 and 6)",
+  "road_metric": "major-road exposure",
+  "hazard_footprint": "USDA Forest Service WHP 2023 classified cells: High (4) and Very High (5)",
+  "annualized_frequency": 0.003136216545390387,
+  "frequency_min_national": 0.0,
+  "frequency_max_national": 0.0315816713751726,
+  "normalized_frequency": 0.09930495787046506,
+  "total_major_road_miles": 490.5598244143958,
+  "wildfire_exposed_major_road_miles": 126.84032808583662,
+  "transportation_exposure": 0.2585624051811659,
+  "transportation_exposure_percent": 25.856240518116593,
+  "transportation_consequence_raw_aadt": 19744.043139904672,
+  "transportation_consequence_normalized": null,
+  "transportation_stress": null,
+  "hpms_coverage_pct_of_exposed_length": 52.12003697977339,
+  "annualized_exposed_road_miles_per_year": 0.39779873556554585,
+  "annualized_relative_road_exposure": 0.0008109076931451057,
+  "feature_counts": {
+    "major_road_features_in_bbox": 288,
+    "hpms_features_returned": 4592,
+    "hpms_missing_geometry_or_aadt": 202,
+    "national_counties_in_frequency_normalization": 3144
+  },
+  "sources": {
+    "county_and_roads": "U.S. Census Bureau TIGERweb",
+    "frequency": "https://services.arcgis.com/XG15cJAlne2vxtgt/arcgis/rest/services/National_Risk_Index_Counties/FeatureServer/0/query",
+    "hpms_traffic": "FHWA Highway Performance Monitoring System 2024",
+    "wildfire_footprint": "https://imagery.geoplatform.gov/iipp/rest/services/Fire_Aviation/USFS_EDW_RMRS_WildfireHazardPotentialClassified/ImageServer"
+  },
+  "interpretation": "Transportation exposure and traffic intensity indicators; not damage, closure, loss, or engineering risk.",
+  "remaining_dependency": "National hazard-specific comparison and coverage verification required.",
+  "whp_class_major_road_miles": {
+    "very_low": 26.90988036371251,
+    "low": 53.05940525259681,
+    "moderate": 56.496037254976734,
+    "high": 126.84032808583662,
+    "very_high": 0.0,
+    "non_burnable": 208.32287178460092,
+    "water": 18.931301672672888
+  },
+  "whp_nodata_major_road_miles": 0.0,
+  "raster_audit": {
+    "tile_sha256": [
+      "18e829dba6f72ae01d699a1c8b5cae2cb5ebe69fc6a810869215b40824ed9949",
+      "4cb884e3fd0b9a77e5e2d4b31d36d896a566cd3acbfd4641e91ec752b22fb92f"
+    ],
+    "source_resolution_metres": 270
+  },
+  "method_version": "national-current-sfha-whp2023-v1",
+  "hazard_label": "High / Very High wildfire hazard potential",
+  "aadt_status": "available",
+  "formulas": {
+    "stress": "normalized_frequency \u00d7 transportation_exposure \u00d7 national hazard-specific exposed AADT percentile",
+    "exposure": "selected hazard-exposed major-road length \u00f7 total major-road length"
+  }
+}

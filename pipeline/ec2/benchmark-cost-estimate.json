@@ -1,0 +1,38 @@
+{
+  "currency": "USD",
+  "checked": "2026-10-18",
+  "region": "us-east-2",
+  "storage_gib": 100,
+  "gp3_per_gib_month": "0.08",
+  "storage_per_month": "8.00",
+  "ipv4_per_hour": "0.005",
+  "scenarios": {
+    "m7i.xlarge": {
+      "compute_per_hour": "0.2016",
+      "total_per_hour": "0.2175589041095890410958904110",
+      "two_hours": "0.4351178082191780821917808220",
+      "two_hours_plus_five_minutes": "0.4532477168949771689497716895",
+      "plus_one_gb_paid_egress_allowance": "0.5432477168949771689497716895",
+      "with_shutdown_egress_and_24h_retained_disk_allowance": "0.8062634155251141552511415525"
+    },
+    "m7i-flex.large": {
+      "compute_per_hour": "0.09576",
+      "total_per_hour": "0.1117189041095890410958904110",
+      "two_hours": "0.2234378082191780821917808220",
+      "two_hours_plus_five_minutes": "0.2327477168949771689497716895",
+      "plus_one_gb_paid_egress_allowance": "0.3227477168949771689497716895",
+      "with_shutdown_egress_and_24h_retained_disk_allowance": "0.5857634155251141552511415525"
+    }
+  },
+  "storage_per_retained_day": "0.2630136986301369863013698630",
+  "external_stop_control": {
+    "service": "EventBridge Scheduler",
+    "region": "us-east-2",
+    "invocations_allowance": 2,
+    "per_million_usd": "1.00",
+    "invocation_charge_before_free_allowance": "0.000002",
+    "armed": false
+  },
+  "proposed_benchmark_ceiling_usd": "1.00",
+  "ceiling_is_hard_enforced": false
+}

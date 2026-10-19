@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-10-18T20:10:36.030279+00:00",
+  "label": "Infrastructure exposure by year \u2014 fixed hazard baseline",
+  "preparation_tests_passed": 8,
+  "existing_historical_tests_passed": 11,
+  "preserved_files_matching": 51,
+  "maryland_frequency_comparisons_passed": 48,
+  "national_nri_records": 3232,
+  "pinned_md_whp_rasters": 24,
+  "pinned_annual_road_archives": 2,
+  "pilot_jobs_listed": 270,
+  "completed_full_spatial_pilot_jobs": 0,
+  "annual_scores_published": 0,
+  "ec2_launch_paused": true,
+  "manifest_sha256": "1f40093ce289b82207ee7f3d44ec56fea292c4870d77cc48a60000cc302ae299"
+}

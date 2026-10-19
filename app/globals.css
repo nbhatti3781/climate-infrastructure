@@ -37,3 +37,8 @@
 
 .ve-note{display:flex;align-items:flex-start;gap:7px;background:#fff8e1;border:1px solid #f0c040;border-radius:8px;padding:9px 11px;font-size:11px;color:#7a5c00;margin:0 0 12px}
 .ve-note svg{flex:none;margin-top:1px;color:#c09000}
+
+.available-assessment{padding:16px 28px;background:#edf4f5;border-bottom:1px solid var(--border);color:#28444d}
+.available-assessment h2{font-size:13px;margin:0 0 6px}
+.available-assessment p{font-size:12px;line-height:1.55;margin:4px 0}
+@media(max-width:720px){.available-assessment{padding:16px}}

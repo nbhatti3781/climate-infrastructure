@@ -45,6 +45,7 @@ next-env.d.ts
 /outputs/
 /work/
 .venv/
+.venv-wildfire/
 
 data/cache/
 __pycache__/

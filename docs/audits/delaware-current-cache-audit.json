@@ -1,0 +1,20 @@
+{
+  "scope": "cached Delaware DFIRM_ID-prefixed NFHL feature attributes only; no GIS recalculation",
+  "unique_features": 11657,
+  "zone_counts": {
+    "AE": 2514,
+    "A": 346,
+    "VE": 257,
+    "X": 8491,
+    "OPEN WATER": 11,
+    "AO": 38
+  },
+  "subtype_counts": {
+    "None": 3084,
+    "FLOODWAY": 82,
+    "0.2 PCT ANNUAL CHANCE FLOOD HAZARD": 6716,
+    "AREA OF MINIMAL FLOOD HAZARD": 1773,
+    "1 PCT DEPTH LESS THAN 1 FOOT": 2
+  },
+  "known_limitation": "DFIRM_ID prefix-only state fetch has not been reconciled against a spatial NFHL ID query; adjacent-state mapping may be omitted. Actual Sussex gap cause is not yet established."
+}

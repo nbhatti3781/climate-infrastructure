@@ -1,0 +1,20 @@
+[
+  {
+    "year": 2020,
+    "source_url": "https://www2.census.gov/geo/tiger/TIGER2020/COUNTY/tl_2020_us_county.zip",
+    "download_sha256": "a490d33145b8cd308b0b53113d4bb31575b84a2b4cf6ec28fa5855be37559d8d",
+    "download_bytes": 80644766
+  },
+  {
+    "year": 2021,
+    "source_url": "https://www2.census.gov/geo/tiger/TIGER2021/COUNTY/tl_2021_us_county.zip",
+    "download_sha256": "26890ff92275ff1392cd205c7021ba510b7f63f2ff985ca327b9f5fd5e9ecc90",
+    "download_bytes": 82328531
+  },
+  {
+    "year": 2022,
+    "source_url": "https://www2.census.gov/geo/tiger/TIGER2022/COUNTY/tl_2022_us_county.zip",
+    "download_sha256": "a48c6e018d80e5557720971831a37120450f02c6d934687ccb3c26314ae8bda6",
+    "download_bytes": 83324165
+  }
+]

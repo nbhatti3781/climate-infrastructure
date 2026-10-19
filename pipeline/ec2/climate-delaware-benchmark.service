@@ -1,0 +1,30 @@
+[Unit]
+Description=Delaware current flood and wildfire assessment benchmark
+Wants=network-online.target
+After=network-online.target
+Requires=climate-benchmark-stop.timer
+
+[Service]
+Type=exec
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/srv/climate-assessment
+Environment=PYTHONUNBUFFERED=1
+Environment=AWS_REGION=us-east-2
+Environment=AWS_DEFAULT_REGION=us-east-2
+ExecStartPre=/usr/bin/test -f /srv/climate-assessment/data/processed/national-current/manifest.json
+ExecStartPre=/usr/bin/systemctl is-active --quiet climate-benchmark-stop.timer
+ExecStartPre=/srv/climate-assessment/.venv-wildfire/bin/python pipeline/ec2/check_guard.py
+ExecStart=/usr/bin/time -v /srv/climate-assessment/.venv-wildfire/bin/python pipeline/process_state_assessment.py --state 10 --benchmark --workers 2 --reserve-mb 5120
+KillSignal=SIGINT
+KillMode=control-group
+TimeoutStopSec=90
+Restart=no
+UMask=0027
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ReadWritePaths=/srv/climate-assessment/data
+StandardOutput=append:/srv/climate-assessment/data/benchmark-logs/delaware.log
+StandardError=append:/srv/climate-assessment/data/benchmark-logs/delaware.log

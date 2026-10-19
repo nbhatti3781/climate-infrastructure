@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "county_count": 24,
+  "howard_validation": {
+    "passed": true,
+    "independent_cell_overlay_miles": 0.0,
+    "overlay_absolute_error_miles": 0.0,
+    "class_partition_error_miles": 5.684341886080801e-13,
+    "checks": [
+      "independent High/Very High cell overlay",
+      "seven-class road-length partition",
+      "no road length in NoData",
+      "national frequency range",
+      "no substituted national consequence rank"
+    ]
+  },
+  "howard_road_total_matches_flood_baseline": true,
+  "checks": [
+    "all 24 Maryland county equivalents",
+    "flat checkpoint schema",
+    "seven-class length partition",
+    "High/Very High selection",
+    "NoData road coverage",
+    "frequency and exposure ranges",
+    "null national ranks; zero stress only for confirmed zero exposure with a road network",
+    "traffic coverage and null semantics"
+  ],
+  "counties_with_high_very_high_exposure": [
+    {
+      "geoid": "24019",
+      "county": "Dorchester County",
+      "exposed_miles": 1.6042893277255226,
+      "hpms_coverage_percent": 0.0,
+      "aadt_status": "null_no_hpms_match"
+    },
+    {
+      "geoid": "24039",
+      "county": "Somerset County",
+      "exposed_miles": 4.868644553481883,
+      "hpms_coverage_percent": 5.0342349358943945,
+      "aadt_status": "available"
+    },
+    {
+      "geoid": "24045",
+      "county": "Wicomico County",
+      "exposed_miles": 2.1985783442071067,
+      "hpms_coverage_percent": 25.260465112966454,
+      "aadt_status": "available"
+    }
+  ]
+}

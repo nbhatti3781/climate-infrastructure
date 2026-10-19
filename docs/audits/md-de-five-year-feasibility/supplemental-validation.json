@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-18T20:00:35.412323+00:00",
+  "target_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "checks_passed": [
+    "both state 2025 AADT definitions",
+    "ten positive-AADT count responses",
+    "ten one-item acquisition-year samples",
+    "six bounded traffic line samples",
+    "ten WFIGS count responses; not interpreted as exposure",
+    "untruncated county/statistics groups",
+    "51 existing preservation hashes unchanged"
+  ],
+  "historical_scores_generated": false,
+  "annual_method_selected": false,
+  "ec2_launch_paused": true,
+  "evidence_sha256": "5e7d3b1cfb42d988e7cc12c290742c275259120fff2f9c464eaae674bc328ac8"
+}

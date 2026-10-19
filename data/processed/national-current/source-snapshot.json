@@ -1,0 +1,17 @@
+{
+  "method": "national-current-sfha-whp2023-v1",
+  "code_sha256": "5f5424b6d1f53b0b2ab703eb38b7ce7faedb3471a5e6887252ba2ba2c7895ebb",
+  "nri_versions": [
+    "December 2025"
+  ],
+  "source_requests": {
+    "c607f649b26dd410c143fdf8e06e95baebfa4f5a7fb248a52122fc8e96f934f6": "d96bcd28d8fa891d9a5f0658bf6bdaf40fc29a5412848d7a7bea19361a1354ae",
+    "2c1444fc8d775cab4604bb3ef6fdd2ad34541feba139fcb29169ff6dae0321da": "537dda8082500914f360ec8fe6f59687114dbee22538fb35fa862b4f76adb6e3",
+    "d03ec5b194dd4b7281dc08aebb63e09feeef7cedfcbc7f660afb76cfe645d43c": "5190ec8ee1b015f8f955d70e7d274d736a3440816487cf8f5fb6a008bb105aac",
+    "384f51b792841094a5119c6368dd28a2fe3502b9a995281019bd207bc829ede8": "004ec271443ca3d3f3f9818c3c7b1b5b7840bf8b74924e8be752d2f53561c638",
+    "55c267d11989eb9ed154c86aae741e7ba4764fa0f909382526b56307da87051a": "ccd4463d6d6b9adea927f8ec8a9b87c0bf409aea6b77f57a507de16e4670885c",
+    "feb1d7da1d4739f4a859e7d3890035789b9235e09fd96af2c303fe9dcd776f98": "8de07cb92472b9ae846372adb600ac7a24222bc237c0b1ad62aa3e8cfa5615c1"
+  },
+  "scope": "50 states and DC; territories excluded explicitly",
+  "missing_nri_geoids": []
+}

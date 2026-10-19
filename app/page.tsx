@@ -33,6 +33,9 @@ type CountyResult = {
   normalized_frequency: number | null;
   total_major_road_miles: number | null;
   flood_exposed_major_road_miles: number | null;
+  wildfire_exposed_major_road_miles?: number | null;
+  aadt_status?: string;
+  whp_class_major_road_miles?: Record<string, number>;
   transportation_exposure_percent: number | null;
   transportation_consequence_raw_aadt: number | null;
   transportation_consequence_normalized: number | null;
@@ -122,7 +125,7 @@ function fmtAadt(n: number | null | undefined): string {
 
 // ── sub-components ───────────────────────────────────────────────────────────
 
-function LimitationsBanner() {
+function LimitationsBanner({ hazard }: { hazard: Hazard }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="limitations-banner">
@@ -137,7 +140,12 @@ function LimitationsBanner() {
       </button>
       {open && (
         <ul className="limitations-list" role="list">
-          {LIMITATIONS.map((l) => (
+          {(hazard === "wildfire" ? [
+            { id: "whp", heading: "High / Very High wildfire hazard potential", body: "USDA Forest Service WHP 2023, a 270-meter planning dataset reflecting landscape conditions at the end of 2020. Exposure is road length in High or Very High cells. Lower classes also have wildfire potential. This is not a seasonal forecast or a prediction of road damage or closure." },
+            { id: "frequency", heading: "Annual probability and hazard potential are separate indicators", body: "FEMA NRI WFIR_AFREQ is annual wildfire probability, normalized using national county values. WHP classes describe hazard potential, not probability. Their product is a screening indicator." },
+            { id: "traffic", heading: "Zero exposure gives zero stress; other scores await national traffic ranks", body: "Confirmed zero exposure with a major-road network gives stress 0 and no traffic consequence average. Positive exposure with missing traffic stays unavailable. Raw exposed-road AADT uses FHWA HPMS 2024 with a 25-meter road match. Maryland-only ranks cannot replace the required national, wildfire-specific percentile." },
+            { id: "scope", heading: "Maryland major roads only", body: "Results cover S1100 and S1200 roads in Maryland's 23 counties and Baltimore city. Local roads are excluded. NoData cells are not counted as zero hazard." },
+          ] : LIMITATIONS).map((l) => (
             <li key={l.id}>
               <strong>{l.heading}</strong>
               <p>{l.body}</p>
@@ -146,6 +154,28 @@ function LimitationsBanner() {
         </ul>
       )}
     </div>
+  );
+}
+
+function WildfireProfile({ result, loading }: { result: CountyResult | null; loading: boolean }) {
+  if (loading) return <div className="metric-card"><span>Loading wildfire data…</span><strong>—</strong></div>;
+  if (!result) return <div className="metric-card"><span>Wildfire exposure</span><strong>No data</strong><small>Precomputed wildfire results are available for Maryland only.</small></div>;
+  const noRoads = result.status === "no_major_roads";
+  return (
+    <>
+      <div className="metric-card">
+        <span>Final Wildfire Stress</span><strong>{noRoads ? "N/A" : result.transportation_stress != null ? fmt(result.transportation_stress, 3) : result.transportation_consequence_raw_aadt == null ? "Unavailable" : "Pending"}</strong>
+        <small>{noRoads ? "No S1100/S1200 roads intersect this county" : result.status === "zero_exposure_complete" ? "Zero exposure in High / Very High WHP; lower classes may still have wildfire potential" : result.transportation_consequence_raw_aadt == null ? "Unavailable: no HPMS match on exposed roads" : "Requires nationwide wildfire-exposed AADT ranking"}</small>
+      </div>
+      <div className="step-grid">
+        <div className="step-card complete"><span>Step 1 · Frequency</span><strong>{fmt(result.normalized_frequency, 4)}</strong><small>Annual wildfire probability: {fmt(result.annualized_frequency == null ? null : result.annualized_frequency * 100, 6)}%</small></div>
+        <div className="step-card complete"><span>Step 2 · Exposure</span><strong>{fmt(result.transportation_exposure_percent, 3)}%</strong><small>{fmt(result.wildfire_exposed_major_road_miles, 3)} of {fmt(result.total_major_road_miles, 2)} major-road miles in High / Very High WHP</small></div>
+        <div className="step-card partial"><span>Step 3 · Consequence</span><strong>{fmtAadt(result.transportation_consequence_raw_aadt)}</strong><small>{result.aadt_status === "null_confirmed_zero_exposure" ? "No road exposure in the selected WHP classes" : result.transportation_consequence_raw_aadt == null ? "No HPMS match on exposed roads" : "Raw length-weighted AADT; national rank required"}</small></div>
+      </div>
+      {result.whp_class_major_road_miles && <details className="metric-note"><summary>Road miles by wildfire hazard class</summary><ul>{Object.entries(result.whp_class_major_road_miles).map(([label, miles]) => <li key={label}>{label.replaceAll("_", " ")}: {fmt(miles, 3)} mi</li>)}</ul></details>}
+      <div className="formula"><span>Transportation Stress calculation</span><code>Stress = normalized frequency × road exposure × normalized traffic consequence</code><code>Exposure = High/Very High WHP road length ÷ total major-road length</code></div>
+      <p className="metric-note">Sources: <a href="https://research.fs.usda.gov/firelab/products/dataandtools/wildfire-hazard-potential">USDA Forest Service WHP 2023</a> (270-meter source), FEMA NRI WFIR_AFREQ, Census TIGERweb S1100+S1200, FHWA HPMS 2024. {result.hpms_coverage_pct_of_exposed_length != null && `HPMS covers ${fmt(result.hpms_coverage_pct_of_exposed_length, 1)}% of exposed road length. `}Lower WHP classes also have wildfire potential. Not damage, closure, or engineering risk.</p>
+    </>
   );
 }
 
@@ -228,14 +258,16 @@ function CountyDetail({
       <h2>{feature.properties.NAME}</h2>
       <p className="geoid">GEOID {feature.properties.GEOID}</p>
 
-      {loading && (
+      {hazard === "wildfire" && <WildfireProfile result={result} loading={loading} />}
+
+      {loading && hazard !== "wildfire" && (
         <div className="metric-card">
           <span>Loading…</span>
           <strong>—</strong>
         </div>
       )}
 
-      {!loading && hazard !== "flood" && (
+      {!loading && hazard !== "flood" && hazard !== "wildfire" && (
         <div className="metric-card">
           <span>{hazards.find((h) => h.id === hazard)?.short} exposure</span>
           <strong>Pending</strong>
@@ -329,7 +361,7 @@ function CountyDetail({
         </>
       )}
 
-      {!loading && result && (
+      {!loading && isFlood && result && (
         <div className="status-list">
           <div>
             <StatusDot status={result.normalized_frequency != null ? "done" : "pending"} />
@@ -361,6 +393,8 @@ function CountyDetail({
 
 export default function Home() {
   const [stateFips, setStateFips] = useState("24");
+  const [assessmentPeriod, setAssessmentPeriod] = useState("current");
+  const [publishedAssessments, setPublishedAssessments] = useState<string[]>([]);
   const [hazard, setHazard] = useState<Hazard>("flood");
   const [counties, setCounties] = useState<CountyFeature[]>([]);
   const [selected, setSelected] = useState<CountyFeature | null>(null);
@@ -369,14 +403,22 @@ export default function Home() {
   const [mapError, setMapError] = useState("");
 
   // per-county data cache
-  const [countyResults, setCountyResults] = useState<Record<string, CountyResult>>({});
-  const [countyLoading, setCountyLoading] = useState(false);
+  const [countyResults, setCountyResults] = useState<Record<string, CountyResult | null>>({});
+  const [resultErrors, setResultErrors] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/assessment-availability").then((response) => {
+      if (!response.ok) throw new Error("Availability catalog unavailable");
+      return response.json();
+    }).then((catalog) => { if (!cancelled) setPublishedAssessments(catalog.published ?? []); })
+      .catch(() => { /* Keep the known Maryland baseline scope on catalog failure. */ });
+    return () => { cancelled = true; };
+  }, []);
 
   // Load county boundaries when state changes
   useEffect(() => {
-    setMapLoading(true);
-    setMapError("");
-    setSelected(null);
+    let cancelled = false;
     const params = new URLSearchParams({
       where: `STATE='${stateFips}'`,
       outFields: "GEOID,NAME,BASENAME,STATE",
@@ -394,39 +436,47 @@ export default function Home() {
         if (!r.ok) throw new Error("Census county boundaries are temporarily unavailable");
         return r.json();
       })
-      .then((data) => setCounties(data.features ?? []))
-      .catch((e) => setMapError(e.message))
-      .finally(() => setMapLoading(false));
+      .then((data) => { if (!cancelled) setCounties(data.features ?? []); })
+      .catch((e) => { if (!cancelled) setMapError(e.message); })
+      .finally(() => { if (!cancelled) setMapLoading(false); });
+    return () => { cancelled = true; };
   }, [stateFips]);
 
   // Load county result when a county is selected
   useEffect(() => {
     if (!selected) return;
     const geoid = selected.properties.GEOID;
-    if (countyResults[geoid] !== undefined) return; // already cached
+    const key = `${assessmentPeriod}:${hazard}:${geoid}`;
+    if (hazard !== "flood" && hazard !== "wildfire") return;
+    if (countyResults[key] !== undefined) return;
 
-    setCountyLoading(true);
-    fetch(`/api/county/${geoid}`)
-      .then((r) => {
-        if (r.status === 404) return null;
-        if (!r.ok) throw new Error("Failed to load county data");
-        return r.json();
+    let cancelled = false;
+    fetch(`/api/county/${geoid}?hazard=${hazard}&year=${assessmentPeriod}`)
+      .then(async (r) => {
+        const body = await r.json();
+        if (!r.ok) throw new Error(body.error ?? "Failed to load county data");
+        return body;
       })
       .then((data) => {
-        setCountyResults((prev) => ({ ...prev, [geoid]: data }));
+        if (!cancelled) setCountyResults((prev) => ({ ...prev, [key]: data }));
       })
-      .catch(() => {
-        setCountyResults((prev) => ({ ...prev, [geoid]: null as unknown as CountyResult }));
-      })
-      .finally(() => setCountyLoading(false));
-  }, [selected, countyResults]);
+      .catch((error) => {
+        if (!cancelled) {
+          setCountyResults((prev) => ({ ...prev, [key]: null }));
+          setResultErrors((prev) => ({ ...prev, [key]: error.message }));
+        }
+      });
+    return () => { cancelled = true; };
+  }, [selected, hazard, assessmentPeriod, countyResults]);
 
   const stateName = states.find(([id]) => id === stateFips)?.[1] ?? "State";
   const filtered = counties
     .filter((c) => c.properties.NAME.toLowerCase().includes(query.toLowerCase()))
     .slice(0, 8);
   const activeHazard = hazards.find((h) => h.id === hazard)!;
-  const selectedResult = selected ? countyResults[selected.properties.GEOID] ?? null : null;
+  const resultKey = selected ? `${assessmentPeriod}:${hazard}:${selected.properties.GEOID}` : "";
+  const selectedResult = countyResults[resultKey] ?? null;
+  const countyLoading = !!selected && (hazard === "flood" || hazard === "wildfire") && countyResults[resultKey] === undefined;
 
   return (
     <main className="dashboard-shell">
@@ -441,7 +491,15 @@ export default function Home() {
         <div className="source-status"><span /> Official-source pipeline</div>
       </header>
 
-      <LimitationsBanner />
+      <LimitationsBanner hazard={hazard} />
+
+      <section className="available-assessment" aria-labelledby="available-assessment-heading">
+        <h2 id="available-assessment-heading">Available assessment</h2>
+        <p><strong>Flood and wildfire results are currently available for Maryland{publishedAssessments.some((key) => key.startsWith("current:")) ? ", with reviewed Delaware county results listed below" : " only"}</strong> — 23 Maryland counties and Baltimore city. Other U.S. counties have not been completed.</p>
+        {publishedAssessments.length > 0 && <p>Reviewed publications: {publishedAssessments.join(", ")}. This list does not imply statewide Delaware or nationwide completion.</p>}
+        <p>Data vintages: USDA WHP 2023 (landscape conditions at the end of 2020); FHWA HPMS 2024. FEMA NRI, FEMA NFHL, and Census TIGERweb release vintages were not recorded in the saved assessment.</p>
+        <p>These are baseline assessments, not annual results. National traffic-consequence rankings remain pending.</p>
+      </section>
 
       <section className="workspace">
         <aside className="controls">
@@ -452,8 +510,22 @@ export default function Home() {
             road exposure, traffic consequence, and stress score.
           </p>
 
+          <label className="field-label" htmlFor="assessment-period">Assessment period</label>
+          <select id="assessment-period" value={assessmentPeriod} onChange={(event) => setAssessmentPeriod(event.target.value)} className="w-full rounded-md border bg-background p-2 text-sm">
+            <option value="current">Current baseline — Maryland available</option>
+            {[2021, 2022, 2023, 2024, 2025].map((year) => <option key={year} value={year}>{year} — {publishedAssessments.some((key) => key.startsWith(`${year}:`)) ? "reviewed results for listed counties only" : "annual results unavailable; audit pending"}</option>)}
+          </select>
+          <p className="metric-note">{assessmentPeriod === "current" ? "WHP 2023 · HPMS 2024. FEMA/TIGER release vintages unrecorded." : `${assessmentPeriod}: no annual county results have been validated. Baseline assessments are not substituted.`}</p>
+
           <label className="field-label">State or territory</label>
-          <Select value={stateFips} onValueChange={setStateFips}>
+          <Select value={stateFips} onValueChange={(value) => {
+            if (value === stateFips) return;
+            setMapLoading(true);
+            setMapError("");
+            setSelected(null);
+            setCounties([]);
+            setStateFips(value);
+          }}>
             <SelectTrigger className="w-full"><SelectValue /></SelectTrigger>
             <SelectContent>
               {states.map(([id, name]) => (
@@ -473,7 +545,7 @@ export default function Home() {
                 <span style={{ background: h.color }} />
                 <div>
                   <strong>{h.label}</strong>
-                  <small>{h.id === "compound" ? "SPEI-R25 event" : "Annualized exposure"}</small>
+                  <small>{h.id === "compound" ? "SPEI-R25 event" : h.id === "wildfire" ? "High / Very High WHP exposure" : "Annualized exposure"}</small>
                 </div>
                 <ChevronRight size={16} />
               </button>
@@ -539,13 +611,13 @@ export default function Home() {
           </div>
           <p className="map-caption">
             County boundaries load on demand from the U.S. Census Bureau TIGERweb service.
-            {stateFips === "24"
-              ? " Flood exposure data available for all 24 Maryland counties."
-              : " Flood exposure data available for Maryland only at this time."}
+            {publishedAssessments.some((key) => key.startsWith("current:")) ? " Maryland baseline and explicitly listed reviewed Delaware county results are available." : " Flood and wildfire assessment results are currently available for Maryland only."}
           </p>
         </section>
 
         <aside className="details">
+          {selected && <p className="metric-note">Assessment: {assessmentPeriod === "current" ? "current baseline" : assessmentPeriod}. {resultErrors[resultKey]}</p>}
+          {selected && selectedResult && <a className="metric-note" href={`/api/county/${selected.properties.GEOID}?hazard=${hazard}&year=${assessmentPeriod}&download=1`}>Export {assessmentPeriod} {hazard} county JSON</a>}
           {selected ? (
             <CountyDetail
               feature={selected}

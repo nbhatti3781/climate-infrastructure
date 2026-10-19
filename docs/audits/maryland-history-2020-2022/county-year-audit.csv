@@ -1,0 +1,145 @@
+year,geoid,county,road_scope,county_geometry_valid,road_features_intersecting_county,road_miles,mapped_fire_types,mapped_wildfire_count,prescribed_fires_excluded,other_fire_types_excluded,wildfire_exposed_road_miles,hpms_selected_records,hpms_missing_geometry,hpms_invalid_geometry,hpms_missing_aadt,hpms_zero_aadt_flagged,hpms_wrong_year,road_aadt_match_percent,exposed_road_aadt_match_percent,exposed_match_status,road_data_status,event_inventory_completeness
+2020,24001,Allegany,S1100,True,25,81.59884650099491,{},0,0,0,0.0,3351,11,0,0,0,0,85.7397220504943,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24001,Allegany,S1100+S1200,True,235,249.08880165810524,{},0,0,0,0.0,3351,11,0,0,0,0,66.66276929728636,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24003,Anne Arundel,S1100,True,126,199.48819624973333,{},0,0,0,0.0,7009,21,0,0,0,0,67.9536214131905,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24003,Anne Arundel,S1100+S1200,True,663,522.3956877023096,{},0,0,0,0.0,7009,21,0,0,0,0,71.82990580010576,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24005,Baltimore,S1100,True,83,217.66231510623314,{},0,0,0,0.0,9575,24,0,0,0,0,63.77379759509451,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24005,Baltimore,S1100+S1200,True,456,583.8064796668352,{},0,0,0,0.0,9575,24,0,0,0,0,73.29874262164518,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24009,Calvert,S1100,True,0,0.0,{},0,0,0,0.0,1374,2,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2020,24009,Calvert,S1100+S1200,True,125,168.39619308906308,{},0,0,0,0.0,1374,2,0,0,0,0,55.312218592270284,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24011,Caroline,S1100,True,0,0.0,{},0,0,0,0.0,649,0,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2020,24011,Caroline,S1100+S1200,True,185,157.5111013122204,{},0,0,0,0.0,649,0,0,0,0,0,46.9404213447768,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24013,Carroll,S1100,True,9,3.2182907963637515,{},0,0,0,0.0,3088,4,0,0,0,0,51.025108793837965,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24013,Carroll,S1100+S1200,True,309,237.06644910065512,{},0,0,0,0.0,3088,4,0,0,0,0,69.75756010753778,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24015,Cecil,S1100,True,10,36.877341932057284,{},0,0,0,0.0,2559,0,0,0,0,0,67.9965987598271,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24015,Cecil,S1100+S1200,True,210,256.081713959651,{},0,0,0,0.0,2559,0,0,0,0,0,69.51355482617907,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24017,Charles,S1100,True,0,0.0,{},0,0,0,0.0,1998,0,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2020,24017,Charles,S1100+S1200,True,116,258.0037267604117,{},0,0,0,0.0,1998,0,0,0,0,0,52.02346229977627,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24019,Dorchester,S1100,True,0,0.0,{},0,0,0,0.0,763,0,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2020,24019,Dorchester,S1100+S1200,True,115,159.13529988749124,{},0,0,0,0.0,763,0,0,0,0,0,53.29088602964183,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24021,Frederick,S1100,True,24,115.20982087851756,{},0,0,0,0.0,4623,10,0,0,0,0,63.2234420133891,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24021,Frederick,S1100+S1200,True,417,439.41220846759995,{},0,0,0,0.0,4623,10,0,0,0,0,61.39774351394592,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24023,Garrett,S1100,True,11,61.80940892724747,{},0,0,0,0.0,2162,5,0,0,0,0,91.61749482342445,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24023,Garrett,S1100+S1200,True,68,219.73196709313936,{},0,0,0,0.0,2162,5,0,0,0,0,72.74454241230767,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24025,Harford,S1100,True,8,36.56337199683191,{},0,0,0,0.0,3721,6,0,0,0,0,62.032903189445314,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24025,Harford,S1100+S1200,True,270,355.0090304982436,{},0,0,0,0.0,3721,6,0,0,0,0,68.89553612846628,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24027,Howard,S1100,True,41,108.78338473759162,{},0,0,0,0.0,3506,4,0,0,0,0,55.84776863158249,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24027,Howard,S1100+S1200,True,249,282.21291153266276,{},0,0,0,0.0,3506,4,0,0,0,0,63.87332423422815,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24029,Kent,S1100,True,0,0.0,{},0,0,0,0.0,304,0,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2020,24029,Kent,S1100+S1200,True,116,174.68947785320606,{},0,0,0,0.0,304,0,0,0,0,0,18.150645040870216,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24031,Montgomery,S1100,True,58,127.15112074017188,{},0,0,0,0.0,8535,4,0,0,0,0,73.54035779007219,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24031,Montgomery,S1100+S1200,True,407,581.3914548219291,{},0,0,0,0.0,8535,4,0,0,0,0,82.86192115728934,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24033,Prince George's,S1100,True,60,156.48142280659593,{},0,0,0,0.0,9167,22,0,0,0,0,64.68732821223875,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24033,Prince George's,S1100+S1200,True,505,624.7159845434919,{},0,0,0,0.0,9167,22,0,0,0,0,77.50122109160405,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24035,Queen Anne's,S1100,True,17,23.084586538313456,{},0,0,0,0.0,1477,0,0,0,0,0,63.90789233106644,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24035,Queen Anne's,S1100+S1200,True,181,258.9922856224224,{},0,0,0,0.0,1477,0,0,0,0,0,43.92965245417178,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24037,St. Mary's,S1100,True,0,0.0,{},0,0,0,0.0,1159,0,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2020,24037,St. Mary's,S1100+S1200,True,106,224.8755779529052,{},0,0,0,0.0,1159,0,0,0,0,0,48.71967591592843,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24039,Somerset,S1100,True,0,0.0,{},0,0,0,0.0,476,0,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2020,24039,Somerset,S1100+S1200,True,62,123.79180717021248,{},0,0,0,0.0,476,0,0,0,0,0,28.307588459286144,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24041,Talbot,S1100,True,0,0.0,{},0,0,0,0.0,1184,4,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2020,24041,Talbot,S1100+S1200,True,93,150.818143256335,{},0,0,0,0.0,1184,4,0,0,0,0,56.716362076342,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24043,Washington,S1100,True,27,118.33109091791248,{},0,0,0,0.0,3583,2,0,0,0,0,59.964104847282066,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24043,Washington,S1100+S1200,True,294,357.8037133783152,{},0,0,0,0.0,3583,2,0,0,0,0,56.09626602692926,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24045,Wicomico,S1100,True,26,29.477354460177807,{},0,0,0,0.0,2148,4,0,0,0,0,61.186853508765104,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24045,Wicomico,S1100+S1200,True,156,225.2207923427375,{},0,0,0,0.0,2148,4,0,0,0,0,57.24051012857745,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24047,Worcester,S1100,True,6,7.490408142816484,{},0,0,0,0.0,2196,4,0,0,0,0,100.0,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24047,Worcester,S1100+S1200,True,175,262.4385432465213,{},0,0,0,0.0,2196,4,0,0,0,0,57.09735045248062,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24510,Baltimore,S1100,True,51,70.44401720252385,{},0,0,0,0.0,8565,10,0,0,0,0,79.53012815218194,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2020,24510,Baltimore,S1100+S1200,True,382,208.8460370147835,{},0,0,0,0.0,8565,10,0,0,0,0,91.90111660714261,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24001,Allegany,S1100,True,32,81.59884650099426,{},0,0,0,0.0,1684,4,0,0,0,0,86.93625709106145,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24001,Allegany,S1100+S1200,True,242,249.07190344323703,{},0,0,0,0.0,1684,4,0,0,0,0,67.3416989083292,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24003,Anne Arundel,S1100,True,131,199.48819624973012,{},0,0,0,0.0,3701,5,0,1,0,0,73.41916891102579,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24003,Anne Arundel,S1100+S1200,True,695,522.3059674060488,{},0,0,0,0.0,3701,5,0,1,0,0,74.38246483960484,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24005,Baltimore,S1100,True,96,217.44583994970864,{},0,0,0,0.0,4926,10,0,2,0,0,69.90836095910785,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24005,Baltimore,S1100+S1200,True,499,583.8064796668416,{},0,0,0,0.0,4926,10,0,2,0,0,76.02864501617492,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24009,Calvert,S1100,True,0,0.0,{},0,0,0,0.0,657,1,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2021,24009,Calvert,S1100+S1200,True,129,167.8434338946405,{},0,0,0,0.0,657,1,0,0,0,0,55.338141656507446,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24011,Caroline,S1100,True,0,0.0,{},0,0,0,0.0,323,0,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2021,24011,Caroline,S1100+S1200,True,191,162.0763150566863,{},0,0,0,0.0,323,0,0,0,0,0,46.94972063801757,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24013,Carroll,S1100,True,16,3.2182907963657925,{},0,0,0,0.0,1455,4,0,0,0,0,55.47265847058791,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24013,Carroll,S1100+S1200,True,330,237.04574267306901,{},0,0,0,0.0,1455,4,0,0,0,0,68.90090475150251,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24015,Cecil,S1100,True,10,36.87734193205832,{},0,0,0,0.0,1274,5,0,0,0,0,69.06047118683765,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24015,Cecil,S1100+S1200,True,210,255.71448248827448,{},0,0,0,0.0,1274,5,0,0,0,0,69.38255762489194,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24017,Charles,S1100,True,0,0.0,{},0,0,0,0.0,953,0,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2021,24017,Charles,S1100+S1200,True,134,257.6048169405141,{},0,0,0,0.0,953,0,0,0,0,0,52.02171942090395,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24019,Dorchester,S1100,True,0,0.0,{},0,0,0,0.0,368,0,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2021,24019,Dorchester,S1100+S1200,True,128,162.05000640587693,{},0,0,0,0.0,368,0,0,0,0,0,52.086146668980234,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24021,Frederick,S1100,True,33,115.20982087852006,{},0,0,0,0.0,2426,11,0,12,0,0,66.51679224031435,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24021,Frederick,S1100+S1200,True,440,440.2645121270545,{},0,0,0,0.0,2426,11,0,12,0,0,62.52788179446904,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24023,Garrett,S1100,True,17,61.809408927249926,{},0,0,0,0.0,1077,3,0,1,0,0,91.96165175622342,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24023,Garrett,S1100+S1200,True,80,219.65632510702238,{},0,0,0,0.0,1077,3,0,1,0,0,73.00532755044956,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24025,Harford,S1100,True,14,36.56337199683125,{},0,0,0,0.0,1815,2,0,0,0,0,63.90042514931038,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24025,Harford,S1100+S1200,True,292,355.10604291240037,{},0,0,0,0.0,1815,2,0,0,0,0,69.11350483029933,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24027,Howard,S1100,True,50,108.76277498106094,{},0,0,0,0.0,1933,1,0,2,0,0,63.01005791410521,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24027,Howard,S1100+S1200,True,274,282.21291167843907,{},0,0,0,0.0,1933,1,0,2,0,0,67.81643260108913,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24029,Kent,S1100,True,0,0.0,{},0,0,0,0.0,151,0,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2021,24029,Kent,S1100+S1200,True,119,174.6894778532114,{},0,0,0,0.0,151,0,0,0,0,0,18.397808710195168,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24031,Montgomery,S1100,True,64,127.15112074017506,{},0,0,0,0.0,4294,18,0,13,0,0,78.14423874575762,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24031,Montgomery,S1100+S1200,True,429,582.4426693762886,{},0,0,0,0.0,4294,18,0,13,0,0,84.02061596494137,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24033,Prince George's,S1100,True,76,156.4663250951369,{},0,0,0,0.0,4745,7,0,8,0,0,71.25606547587859,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24033,Prince George's,S1100+S1200,True,534,624.9377178704945,{},0,0,0,0.0,4745,7,0,8,0,0,79.56797280211364,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24035,Queen Anne's,S1100,True,17,23.084586538313452,{},0,0,0,0.0,754,0,0,1,0,0,65.20864341760809,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24035,Queen Anne's,S1100+S1200,True,199,265.22087896637527,{},0,0,0,0.0,754,0,0,1,0,0,43.21915244216165,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24037,St. Mary's,S1100,True,0,0.0,{},0,0,0,0.0,546,0,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2021,24037,St. Mary's,S1100+S1200,True,106,224.85288863651965,{},0,0,0,0.0,546,0,0,0,0,0,48.71772536905205,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24039,Somerset,S1100,True,0,0.0,{},0,0,0,0.0,230,1,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2021,24039,Somerset,S1100+S1200,True,72,123.76221289971777,{},0,0,0,0.0,230,1,0,0,0,0,28.31395319602878,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24041,Talbot,S1100,True,0,0.0,{},0,0,0,0.0,561,2,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2021,24041,Talbot,S1100+S1200,True,97,152.00378041461778,{},0,0,0,0.0,561,2,0,0,0,0,56.81138097811409,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24043,Washington,S1100,True,31,118.33114006912315,{},0,0,0,0.0,1870,1,0,0,0,0,63.566627734928936,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24043,Washington,S1100+S1200,True,306,358.0959956431559,{},0,0,0,0.0,1870,1,0,0,0,0,57.86007752638406,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24045,Wicomico,S1100,True,26,29.409800902035766,{},0,0,0,0.0,1047,3,0,0,0,0,64.88619582329837,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24045,Wicomico,S1100+S1200,True,167,227.3359786477247,{},0,0,0,0.0,1047,3,0,0,0,0,57.832284503957,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24047,Worcester,S1100,True,6,7.490408142816239,{},0,0,0,0.0,1082,1,0,0,0,0,100.0,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24047,Worcester,S1100+S1200,True,175,262.43854391455136,{},0,0,0,0.0,1082,1,0,0,0,0,57.325995491866635,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24510,Baltimore,S1100,True,61,70.44401720252905,{},0,0,0,0.0,3943,4,0,0,0,0,84.23565492759438,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2021,24510,Baltimore,S1100+S1200,True,396,207.61897766148158,{},0,0,0,0.0,3943,4,0,0,0,0,93.56968619664677,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24001,Allegany,S1100,True,32,81.59884650099421,{},0,0,0,0.0,2139,6,0,469,0,0,87.56050007942676,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24001,Allegany,S1100+S1200,True,242,249.07190344323703,{},0,0,0,0.0,2139,6,0,469,0,0,67.51728082733018,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24003,Anne Arundel,S1100,True,131,199.4881962497304,{},0,0,0,0.0,4167,7,0,478,0,0,72.70133389924958,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24003,Anne Arundel,S1100+S1200,True,695,522.3228214809759,{},0,0,0,0.0,4167,7,0,478,0,0,74.0236079978,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24005,Baltimore,S1100,True,96,217.44583994970947,{},0,0,0,0.0,6127,13,0,1165,0,0,70.79609065648279,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24005,Baltimore,S1100+S1200,True,499,583.8064796668405,{},0,0,0,0.0,6127,13,0,1165,0,0,76.46564659587403,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24009,Calvert,S1100,True,0,0.0,{},0,0,0,0.0,657,3,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2022,24009,Calvert,S1100+S1200,True,129,167.84343389463928,{},0,0,0,0.0,657,3,0,0,0,0,54.79664711033351,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24011,Caroline,S1100,True,0,0.0,{},0,0,0,0.0,317,1,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2022,24011,Caroline,S1100+S1200,True,191,162.07631505668596,{},0,0,0,0.0,317,1,0,0,0,0,47.819064390442485,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24013,Carroll,S1100,True,16,3.2182907963657925,{},0,0,0,0.0,1468,4,0,19,0,0,55.42180265540405,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24013,Carroll,S1100+S1200,True,330,237.045742758212,{},0,0,0,0.0,1468,4,0,19,0,0,68.41290143229891,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24015,Cecil,S1100,True,10,36.87734193205825,{},0,0,0,0.0,1490,3,0,221,0,0,75.48243362507988,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24015,Cecil,S1100+S1200,True,210,255.7144830878957,{},0,0,0,0.0,1490,3,0,221,0,0,70.6982669629929,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24017,Charles,S1100,True,0,0.0,{},0,0,0,0.0,1005,3,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2022,24017,Charles,S1100+S1200,True,134,257.6048174152668,{},0,0,0,0.0,1005,3,0,0,0,0,51.7640822522154,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24019,Dorchester,S1100,True,0,0.0,"{""Wildfire"": 1}",1,0,0,0.0,368,0,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2022,24019,Dorchester,S1100+S1200,True,128,162.05000640587656,"{""Wildfire"": 1}",1,0,0,0.0,368,0,0,0,0,0,52.11232773066426,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24021,Frederick,S1100,True,33,115.20982087851999,{},0,0,0,0.0,2892,14,0,483,0,0,66.58132107714856,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24021,Frederick,S1100+S1200,True,440,440.264479768486,{},0,0,0,0.0,2892,14,0,483,0,0,62.83447775375579,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24023,Garrett,S1100,True,17,61.80940892725002,{},0,0,0,0.0,1435,3,0,352,0,0,93.36819774493553,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24023,Garrett,S1100+S1200,True,80,219.65632510702284,{},0,0,0,0.0,1435,3,0,352,0,0,73.40311274541666,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24025,Harford,S1100,True,14,36.56337199683125,{},0,0,0,0.0,2032,2,0,204,0,0,65.91377920262015,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24025,Harford,S1100+S1200,True,292,355.10604291240145,{},0,0,0,0.0,2032,2,0,204,0,0,69.35653453592278,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24027,Howard,S1100,True,49,108.76277498106099,{},0,0,0,0.0,2281,4,0,362,0,0,63.282277420861405,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24027,Howard,S1100+S1200,True,270,281.4675411695236,{},0,0,0,0.0,2281,4,0,362,0,0,68.19840142071752,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24029,Kent,S1100,True,0,0.0,{},0,0,0,0.0,153,1,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2022,24029,Kent,S1100+S1200,True,119,174.68947785321183,{},0,0,0,0.0,153,1,0,0,0,0,18.60867244284126,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24031,Montgomery,S1100,True,64,127.15112110148642,{},0,0,0,0.0,4850,13,0,553,0,0,78.09308372100611,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24031,Montgomery,S1100+S1200,True,429,582.442669748278,{},0,0,0,0.0,4850,13,0,553,0,0,84.03538816645843,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24033,Prince George's,S1100,True,76,156.46633348646677,{},0,0,0,0.0,5317,14,0,581,0,0,72.15770446803938,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24033,Prince George's,S1100+S1200,True,535,625.0648044903337,{},0,0,0,0.0,5317,14,0,581,0,0,79.65855057277781,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24035,Queen Anne's,S1100,True,17,23.084586538313452,{},0,0,0,0.0,763,3,0,1,0,0,67.9563522297637,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24035,Queen Anne's,S1100+S1200,True,199,265.2208789663757,{},0,0,0,0.0,763,3,0,1,0,0,44.047547758534925,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24037,St. Mary's,S1100,True,0,0.0,{},0,0,0,0.0,546,0,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2022,24037,St. Mary's,S1100+S1200,True,106,224.85288869572898,{},0,0,0,0.0,546,0,0,0,0,0,48.02724002726305,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24039,Somerset,S1100,True,0,0.0,{},0,0,0,0.0,231,0,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2022,24039,Somerset,S1100+S1200,True,72,123.76221289971758,{},0,0,0,0.0,231,0,0,0,0,0,27.99193867200769,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24041,Talbot,S1100,True,0,0.0,{},0,0,0,0.0,565,1,0,0,0,0,,,no_selected_roads,no_selected_roads,not_independently_verified
+2022,24041,Talbot,S1100+S1200,True,97,152.00378041461792,{},0,0,0,0.0,565,1,0,0,0,0,56.93747904696192,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24043,Washington,S1100,True,31,118.33114006912298,{},0,0,0,0.0,2550,9,0,669,0,0,64.47812391584121,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24043,Washington,S1100+S1200,True,306,358.09599588078595,{},0,0,0,0.0,2550,9,0,669,0,0,58.24746901511805,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24045,Wicomico,S1100,True,26,29.409800902035798,{},0,0,0,0.0,1050,3,0,0,0,0,66.462797240711,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24045,Wicomico,S1100+S1200,True,166,227.335978675655,{},0,0,0,0.0,1050,3,0,0,0,0,57.878937031179746,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24047,Worcester,S1100,True,6,7.490408142816239,{},0,0,0,0.0,1076,4,0,0,0,0,100.0,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24047,Worcester,S1100+S1200,True,175,262.43854391455096,{},0,0,0,0.0,1076,4,0,0,0,0,57.38964801301945,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24510,Baltimore,S1100,True,61,70.44401720252891,{},0,0,0,0.0,4336,7,0,389,0,0,84.6036938022807,,no_mapped_wildfire_road_exposure,available,not_independently_verified
+2022,24510,Baltimore,S1100+S1200,True,396,207.61897785730218,{},0,0,0,0.0,4336,7,0,389,0,0,93.67010157925267,,no_mapped_wildfire_road_exposure,available,not_independently_verified

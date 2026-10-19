@@ -1,0 +1,285 @@
+{
+  "scope": "Maryland, 24 county equivalents, 2020\u20132022; two road scopes audited separately without changing the selected dashboard scope",
+  "sources": [
+    {
+      "url": "https://www2.census.gov/geo/tiger/TIGER2020/PRISECROADS/tl_2020_24_prisecroads.zip",
+      "local_file": "/tmp/maryland-history-audit-2020-2022/tl_2020_24_prisecroads.zip",
+      "bytes": 5291154,
+      "sha256": "47f60bb374d1a4763795bf3862373ec250d9fb161cdab8c998322bd0d0c5a504"
+    },
+    {
+      "url": "https://www2.census.gov/geo/tiger/TIGER2021/PRISECROADS/tl_2021_24_prisecroads.zip",
+      "local_file": "/tmp/maryland-history-audit-2020-2022/tl_2021_24_prisecroads.zip",
+      "bytes": 5178078,
+      "sha256": "050c43ffedfceb6a79ca469e806c09cc3cf225a9864dec747aed9c41a8cc825d"
+    },
+    {
+      "url": "https://www2.census.gov/geo/tiger/TIGER2022/PRISECROADS/tl_2022_24_prisecroads.zip",
+      "local_file": "/tmp/maryland-history-audit-2020-2022/tl_2022_24_prisecroads.zip",
+      "bytes": 5237932,
+      "sha256": "7c830e2523287dd79ae506ad5d5c3ae3aa6d3035f41d24a9c80440c34f6dd53b"
+    },
+    {
+      "year": 2020,
+      "source_url": "https://www2.census.gov/geo/tiger/TIGER2020/COUNTY/tl_2020_us_county.zip",
+      "download_sha256": "a490d33145b8cd308b0b53113d4bb31575b84a2b4cf6ec28fa5855be37559d8d",
+      "download_bytes": 80644766
+    },
+    {
+      "year": 2021,
+      "source_url": "https://www2.census.gov/geo/tiger/TIGER2021/COUNTY/tl_2021_us_county.zip",
+      "download_sha256": "26890ff92275ff1392cd205c7021ba510b7f63f2ff985ca327b9f5fd5e9ecc90",
+      "download_bytes": 82328531
+    },
+    {
+      "year": 2022,
+      "source_url": "https://www2.census.gov/geo/tiger/TIGER2022/COUNTY/tl_2022_us_county.zip",
+      "download_sha256": "a48c6e018d80e5557720971831a37120450f02c6d934687ccb3c26314ae8bda6",
+      "download_bytes": 83324165
+    }
+  ],
+  "years": [
+    {
+      "year": 2020,
+      "maryland_mapped_fire_types": {},
+      "hpms_selected_records": 106762,
+      "hpms_missing_geometry": 155,
+      "hpms_invalid_geometry": 0,
+      "hpms_missing_aadt": 12022,
+      "hpms_zero_aadt_flagged": 0,
+      "hpms_wrong_year": 0,
+      "road_missing_geometry": 0,
+      "road_invalid_geometry": 0,
+      "hpms_url": "https://geo.dot.gov/server/rest/services/Hosted/HPMS_FULL_MD_2020/FeatureServer/0"
+    },
+    {
+      "year": 2021,
+      "maryland_mapped_fire_types": {},
+      "hpms_selected_records": 47757,
+      "hpms_missing_geometry": 96,
+      "hpms_invalid_geometry": 0,
+      "hpms_missing_aadt": 5969,
+      "hpms_zero_aadt_flagged": 0,
+      "hpms_wrong_year": 0,
+      "road_missing_geometry": 0,
+      "road_invalid_geometry": 0,
+      "hpms_url": "https://geo.dot.gov/server/rest/services/Hosted/HPMS_FULL_MD_2021/FeatureServer/0"
+    },
+    {
+      "year": 2022,
+      "maryland_mapped_fire_types": {
+        "Wildfire": 1
+      },
+      "hpms_selected_records": 47815,
+      "hpms_missing_geometry": 118,
+      "hpms_invalid_geometry": 0,
+      "hpms_missing_aadt": 5946,
+      "hpms_zero_aadt_flagged": 0,
+      "hpms_wrong_year": 0,
+      "road_missing_geometry": 0,
+      "road_invalid_geometry": 0,
+      "hpms_url": "https://geo.dot.gov/server/rest/services/Hosted/HPMS_FULL_MD_2022/FeatureServer/0"
+    }
+  ],
+  "national_mapped_fire_type_counts": {
+    "2020": {
+      "Wildfire": 468,
+      "Prescribed Fire": 343,
+      "Other": 3
+    },
+    "2021": {
+      "Wildfire": 422,
+      "Prescribed Fire": 594,
+      "Other": 4
+    },
+    "2022": {
+      "Prescribed Fire": 638,
+      "Wildfire": 530,
+      "Other": 9
+    }
+  },
+  "regional_missing_area_records": [],
+  "county_year_count": 72,
+  "audit_rows_with_two_road_scopes": 144,
+  "prescribed_fire_policy": "Exclude Prescribed Fire. Only FIRE_TYPE=Wildfire enters the audit footprint; other types listed and excluded, not guessed.",
+  "aadt_match_method": "Selected year HPMS f_system<=4 with positive AADT and valid geometry; zero-valued records separately flagged, not assumed measured traffic. Clip to reporting county; measure TIGER road length within 25 m of unioned HPMS lines, divided by TIGER length. Exposed-road denominator is only road length inside mapped Wildfire boundaries. Zero exposure has null match rate, not 100%.",
+  "limitations": [
+    "MTBS maps qualifying large fires only; no polygons is not proof of no fires.",
+    "Source page completion is not independent verification against all fire incident records.",
+    "Missing source geometry without a usable location cannot be assigned to a county.",
+    "Changing WHP to annual mapped-fire perimeters changes the methodology and needs Gina review.",
+    "Road scopes remain separate; no application or pipeline outputs are modified.",
+    "This audit does not calculate annual hazard frequency, normalized consequence or stress."
+  ],
+  "regional_fire_geometry": {
+    "records": 19,
+    "missing": 0,
+    "invalid": 0
+  },
+  "national_fire_attribute_screen": {
+    "records": 3011,
+    "missing_or_zero_shape_area": 0,
+    "missing_centroid": 0,
+    "note": "Area and centroid availability screen only; national polygon validity was not audited."
+  },
+  "download_count_checks": [
+    {
+      "year": 2020,
+      "downloaded_hpms_records": 106762,
+      "service_count": 106762,
+      "duplicate_ids": 0,
+      "hpms_county_ids": {
+        "1": 3351,
+        "null": 23590,
+        "3": 7009,
+        "5": 9575,
+        "43": 3583,
+        "33": 9167,
+        "25": 3721,
+        "27": 3506,
+        "47": 2196,
+        "510": 8565,
+        "31": 8535,
+        "29": 304,
+        "41": 1184,
+        "35": 1477,
+        "37": 1159,
+        "39": 476,
+        "45": 2148,
+        "13": 3088,
+        "15": 2559,
+        "17": 1998,
+        "9": 1374,
+        "11": 649,
+        "21": 4623,
+        "23": 2162,
+        "19": 763
+      }
+    },
+    {
+      "year": 2021,
+      "downloaded_hpms_records": 47757,
+      "service_count": 47757,
+      "duplicate_ids": 0,
+      "hpms_county_ids": {
+        "31": 4294,
+        "33": 4745,
+        "35": 754,
+        "37": 546,
+        "43": 1870,
+        "21": 2426,
+        "23": 1077,
+        "25": 1815,
+        "27": 1933,
+        "29": 151,
+        "null": 5942,
+        "5": 4926,
+        "9": 657,
+        "13": 1455,
+        "11": 323,
+        "510": 3943,
+        "47": 1082,
+        "45": 1047,
+        "41": 561,
+        "39": 230,
+        "1": 1684,
+        "3": 3701,
+        "17": 953,
+        "19": 368,
+        "15": 1274
+      }
+    },
+    {
+      "year": 2022,
+      "downloaded_hpms_records": 47815,
+      "service_count": 47815,
+      "duplicate_ids": 0,
+      "hpms_county_ids": {
+        "3": 4167,
+        "27": 2281,
+        "510": 4336,
+        "13": 1468,
+        "1": 2139,
+        "5": 6127,
+        "21": 2892,
+        "43": 2550,
+        "9": 657,
+        "31": 4850,
+        "19": 368,
+        "17": 1005,
+        "15": 1490,
+        "29": 153,
+        "11": 317,
+        "25": 2032,
+        "47": 1076,
+        "23": 1435,
+        "45": 1050,
+        "37": 546,
+        "39": 231,
+        "35": 763,
+        "33": 5317,
+        "41": 565
+      }
+    }
+  ],
+  "read_only_checks": {
+    "baseline_files_verified_unchanged": 70,
+    "changed": []
+  },
+  "road_match_summary": [
+    {
+      "year": 2020,
+      "road_scope": "S1100",
+      "road_miles": 1393.6709779340829,
+      "county_years_with_roads": 16,
+      "length_weighted_match_percent": 67.87429285663468,
+      "min_match_percent": 51.025108793837965,
+      "max_match_percent": 100.0
+    },
+    {
+      "year": 2020,
+      "road_scope": "S1100+S1200",
+      "road_miles": 7081.4353879312475,
+      "county_years_with_roads": 24,
+      "length_weighted_match_percent": 64.4801581167849,
+      "min_match_percent": 18.150645040870216,
+      "max_match_percent": 91.90111660714261
+    },
+    {
+      "year": 2021,
+      "road_scope": "S1100",
+      "road_miles": 1393.351290902649,
+      "county_years_with_roads": 16,
+      "length_weighted_match_percent": 72.42074311411979,
+      "min_match_percent": 55.47265847058791,
+      "max_match_percent": 100.0
+    },
+    {
+      "year": 2021,
+      "road_scope": "S1100+S1200",
+      "road_miles": 7098.158061684244,
+      "county_years_with_roads": 24,
+      "length_weighted_match_percent": 65.48748674999928,
+      "min_match_percent": 18.397808710195168,
+      "max_match_percent": 93.56968619664677
+    },
+    {
+      "year": 2022,
+      "road_scope": "S1100",
+      "road_miles": 1393.3512996552909,
+      "county_years_with_roads": 16,
+      "length_weighted_match_percent": 73.07612718811875,
+      "min_match_percent": 55.42180265540405,
+      "max_match_percent": 100.0
+    },
+    {
+      "year": 2022,
+      "road_scope": "S1100+S1200",
+      "road_miles": 7097.556601563621,
+      "county_years_with_roads": 24,
+      "length_weighted_match_percent": 65.63812329753647,
+      "min_match_percent": 18.60867244284126,
+      "max_match_percent": 93.67010157925267
+    }
+  ]
+}

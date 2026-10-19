@@ -1,0 +1,277 @@
+{
+  "wildfire:24001": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "6476c22f3e4d5d67576d3953fc7107f801f536000d6190389bc9fe7b776afa6f",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24001.json"
+  },
+  "flood:24001": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "c04a2ba08681389b8454b6da99d5c07e768dd2542aba6f2d364de208c23750db",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24001.json"
+  },
+  "wildfire:24003": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "78d3b6b45d208a17ac2834b8d93f6c1537e31a0c0e9b356fed136ece1364c403",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24003.json"
+  },
+  "flood:24003": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "3d76b8fda8b16a9ed097ee1c7e8847f61f72ca0cc13d1a65406f595d157d11eb",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24003.json"
+  },
+  "wildfire:24005": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "1c53a6c7cb538a955b98e6e3153af4ee92812e9441e1eff6145fd6b6a58d7ced",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24005.json"
+  },
+  "flood:24005": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "0310525b9081c6dda3a1564e25c8ec8576f2788073a7832a2cafe8083b5fc005",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24005.json"
+  },
+  "wildfire:24009": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "2b48a4da3d73a2e9a8fce3e2c5d115709b23fd8dc08a3ee51a2b4557a194693e",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24009.json"
+  },
+  "flood:24009": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "9622462be20a9cb857b8872e443ed30626d8ddb5cd1bf1b59926a0f5c7561c1a",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24009.json"
+  },
+  "wildfire:24011": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "972922df82c6b969d3804059dcd132d7995789d6d02aeca7cdc9a8cca08cb616",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24011.json"
+  },
+  "flood:24011": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "d3a6e56a5aadb1972328d175920b0ba932aa69c83ffa6df552f51c859a4f3da4",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24011.json"
+  },
+  "wildfire:24013": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "e74b2c1858776dd9b16e7ec163cce3d5a79b10397cd74570661d06339b640880",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24013.json"
+  },
+  "flood:24013": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "38bdd77777b396be79b8053ed21b9de9a9e8292eadbeea43447430d23232639f",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24013.json"
+  },
+  "wildfire:24015": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "2562222e9cfbb21e5eebc4590e7c79fcd1978cc8b167bf101e0182fe2d09ca14",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24015.json"
+  },
+  "flood:24015": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "e7acf748e0b47304540da9caddb852d056a6ee945445b2de2626585bced38b32",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24015.json"
+  },
+  "wildfire:24017": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "7bfaf1f885afc2786966e0400b631d3f7ec002489e23314570fb22cf9432de0d",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24017.json"
+  },
+  "flood:24017": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "4dbef30b125e8327b08c2db3faf0619461823e774c4f91a3e9346f94fc2adb09",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24017.json"
+  },
+  "wildfire:24019": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "8d55195185dcbfdd7165fbacc3b83cc9fe4b18d4cbc70e5fc377f9d70b45b09c",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24019.json"
+  },
+  "flood:24019": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "e35ddba4de3304fc4fcea11ccef61a068c8a9c17774a93a9120251b3c62ef2cb",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24019.json"
+  },
+  "wildfire:24021": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "2652138c9588ce50ecabe86817d2c32b97f7e2f3993eb5c3ce2d85c3732a70df",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24021.json"
+  },
+  "flood:24021": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "a04616fa8bec4eafaf31dfeeb2b82d83c1c477bf80e86ab3b3e142f446edc814",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24021.json"
+  },
+  "wildfire:24023": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "2d932d79ad6319c7073d48f59076ab00e3f704220f9f97c7d5e9fd24ed421580",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24023.json"
+  },
+  "flood:24023": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "677f8ff022be88e1fcaad130a367e4deb963349cc958e0781555e7e130db7763",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24023.json"
+  },
+  "wildfire:24025": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "b0c28d1f4782a82da114ad64d741139cd233c3197482849be6a36ec56d42329d",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24025.json"
+  },
+  "flood:24025": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "f278f97ca2355e6364d11fbdf33dc8a43fb4dbf6e10e2250a28b5095b2ac68c3",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24025.json"
+  },
+  "wildfire:24027": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "e55875decf43fc3ae39eced374d79d59b6621f5927d81c70dc04a6aeed1447db",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24027.json"
+  },
+  "flood:24027": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "090513831338b6a7599ae360406da0091df94818822fb380a817be0e1f678b27",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24027.json"
+  },
+  "wildfire:24029": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "da0c2a8241b36cd65adf12a3ad8bdfe85abff9a6448ecf9bac7978ee66a43ed6",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24029.json"
+  },
+  "flood:24029": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "cb88e395bb0d9b5f8edfdf5c0050df1c349a3a102639fff91b1a22c16a341738",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24029.json"
+  },
+  "wildfire:24031": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "ab8c834c6e2ffd2bae8fdecde2014a40b3d8349e5befbcc192569d0b9dde8789",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24031.json"
+  },
+  "flood:24031": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "023bff01435d03a695e1d57c7edb86910cdda4a6e7f65d12f761e369a2a5ef3d",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24031.json"
+  },
+  "wildfire:24033": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "b304078c8bb54afd00b3df0f1c93a6e6adf1b2ea013d8bfab1f5c677166ae57c",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24033.json"
+  },
+  "flood:24033": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "b8698ce2961a3bb70b9f82b6e2a11ff44f5756f11bf0815b102c47a329afecce",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24033.json"
+  },
+  "wildfire:24035": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "7782f618982f6e7d86b9da9fd167d193ad8428f978b995980c64dcbd5610894f",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24035.json"
+  },
+  "flood:24035": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "09fde41381cdacc6aed920a7f82d10651b7bb3ecf499478df66236f3c34c2c32",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24035.json"
+  },
+  "wildfire:24037": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "f7fed20f1667cc4ca68478b1493ff2948dc5000b50aef60fe5cf8d942f1890de",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24037.json"
+  },
+  "flood:24037": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "c7427abd4460e5783f4dd95d9c60dcbbf4f79ae970bd442053a5b2a487543473",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24037.json"
+  },
+  "wildfire:24039": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "3832cfe76de755f7213184b5674f7c309985fa4b97de2ab37e5bced11318e475",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24039.json"
+  },
+  "flood:24039": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "57aef9ac5f399d8ac00ff34b4149583ea4f9152c67291b001ee3c30e719e7d3b",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24039.json"
+  },
+  "wildfire:24041": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "05bb3eab0b65fa6902531b3f4c857f5ff0b0926ab22d55001b50ac9a4bdbe9b4",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24041.json"
+  },
+  "flood:24041": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "6b744469ff8d9e12ec492cc56e4ad7e4380caff5a1dac2857948b72641dc816c",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24041.json"
+  },
+  "wildfire:24043": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "50078936fc5272b9f531b8cbd7c913572c9b3ab0ff75207e8b79bdfecd764f80",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24043.json"
+  },
+  "flood:24043": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "0726f1506118d47c1aa0d83c7a136222f3a402b3751dea1c78839e185cac90e1",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24043.json"
+  },
+  "wildfire:24045": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "1963bb2b07ef7bc8da7e7e1770c8859c72aaede9b153886bfd85bed3a1183308",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24045.json"
+  },
+  "flood:24045": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "a09e5f7ffe27f0653a02d00589427aaa342ab851db809a5743b15523898e7cdd",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24045.json"
+  },
+  "wildfire:24047": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "4160a453f4ceaf2fa6f8dc867fa7af00539afa1f68aa057ccd6906033e8bb3ab",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24047.json"
+  },
+  "flood:24047": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "4e46c84b4345a92dffba2a0810466a0e6cc734b0064749653e44390de2b6fc7a",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24047.json"
+  },
+  "wildfire:24510": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "ae46f35593ba8f2cad522b55a639cfe441945f1436ebffd6b50ee729238202b6",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/wildfire/counties/24510.json"
+  },
+  "flood:24510": {
+    "status": "maryland_preserved",
+    "baseline_sha256": "dbb300d894dfa9b215251112655101b42c64a964011520a8706ff2a169d28038",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/counties/24510.json"
+  },
+  "wildfire:01001": {
+    "status": "traffic_coverage_incomplete",
+    "fingerprint": "6b681bf2e644a74ae43561a908a1515dc83de9c77bbcf6e9ea663f961fcb560e",
+    "output": "/Users/nawalbhatti/climate-infrastructure/climate-infrastructure/data/processed/national-current/wildfire/counties/01001.json",
+    "output_sha256": "b7caa6d2eff22f77a944f03b61163f2ad1a3f4a6d6f4dce536cf533f8996c617",
+    "source_requests": {
+      "307def43856c21324f8c68b7b979b658c60d0a7593df1bb9a28ddd947dff6c4b": "cc05d07d52e3989061e248e7179f07c674e0a59a86a4f3ca55f81a722fa6af55",
+      "dfd257678e3f404ba6f95cfbf2b2b0f69005b2f5a9a62c88fa9c3680ac917754": "58ae574c0993dac5653e540c1fe839cf4165be277fee32650f6a59c0fc72e8cb",
+      "fd2e1d6d747f19a527ece7e2f1efabdbf849137620f09bb46724ec4d986b9fcb": "9c9e7aa6f70ccdc8846e91470846bfc4f262a5f3ade9c875da814063196da721",
+      "cff5960790d698252d7266dfd7934518f765ef7eb16ae4bff156b84c0fda1ba9": "a959287802d3c6d62bdac9b96cd24e5a23d27a77737a55f6e6e549b038274bdf",
+      "dedf33101992313aabf7260108f0f07bda2329a4f81131c63a332d463a93c2d0": "4f34c283d5ae777cccc23fa01aa2396dfe62b7b06f4a8121e592483fb6f20322",
+      "bcb91c95f4303e31813333b095d3952af008266412c6c705bd7de9cf47ca3fbf": "d80b6647b8e9a7f43e42195257f6955efde4ad179e2238351405775b8ce44246",
+      "d627762c8bc08b717a3b59e9035de5c262e3725b2a142638b69d99a1cfa43474": "051d4d1f29e86302bf42f6589d0b69234012837c4eb39cffe420821eac02f228",
+      "1f40712da503699cb0c78ce35951dd0154fde9747c22a5c74c7f056f104f891c": "b534a184d1d3e4479da94c308a54997313dfe8f9fe61c634b7b4b32c78fbc2d9",
+      "17989caf4ee8d1074b5a437d7a203dbe4169a3de43d167159d5159d6400512c0": "46eaa434d3662b47db2cd1fc8d3b1ca85b0a65790527ff3364d732a81bd8be5c",
+      "5a2282a080ae09e3ba5df3274f9783abfb3e7153373f198bad74e5a0c4c51631": "3ca49499e621ef45499c1184ae24485d084dc434448d38ec6c6adec0292c7235",
+      "91ba7c96a25279887ad7fed2acd1b753fbe1d3e3e23851c41f8d219170cc3ccd": "017846125a8272186c3571a0f15fab4b7552c3d08f6dcf5e49d576a2b2ec292c",
+      "4c7852c72aa9856a68defa14eff28a121fd01c2961611e9b884690202f1236ea": "627d343fcde8e730d8c0e319e83a1b65e6d1849e94fec94b7481ecb0a5e9e217",
+      "c6ca22bbb641ae6a10cc94083734e38d4dae4f55ef997168fe94cc73f0e9a1c3": "69b7fd68a734906a43f6d86f72f85673e4541d4509e24cd59eb34a3b68fca39f"
+    },
+    "traffic_coverage_pct": 97.11249833605234
+  },
+  "flood:01001": {
+    "status": "blocked_source_or_geometry",
+    "reason": "Source error https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer/28/query: {'code': 500, 'message': 'Error performing query operation', 'details': []}",
+    "fingerprint": "c5b7bce8df8f62cdeb95db3a3236eb030b9a8a891b820ede0d0f0bb227af229c"
+  },
+  "wildfire:01003": {
+    "status": "running",
+    "fingerprint": "8e5e646b1253c6ff1fe8cf0664d8c47c3c2c04211c0da4bfd69ba9a49b6b18c4"
+  },
+  "flood:01003": {
+    "status": "running",
+    "fingerprint": "378bd5feff95b63bf47a45c2a06229832278bc2c741fd9f0c3e3f3239f3613aa"
+  }
+}

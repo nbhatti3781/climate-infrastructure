@@ -1,0 +1,265 @@
+{
+  "audit_type": "metadata_only",
+  "window": "2021-2025_candidate",
+  "checked_at": "2026-10-18T19:29:05.514615+00:00",
+  "records": [
+    {
+      "year": 2021,
+      "state": "10",
+      "roads": {
+        "url": "https://www2.census.gov/geo/tiger/TIGER2021/PRISECROADS/tl_2021_10_prisecroads.zip",
+        "status": "file_header_available",
+        "http_status": 200,
+        "bytes": "1238518",
+        "etag": null,
+        "last_modified": "Wed, 22 Sep 2021 11:49:17 GMT",
+        "data_completeness_verified": false
+      },
+      "county_boundaries": {
+        "url": "https://www2.census.gov/geo/tiger/TIGER2021/COUNTY/tl_2021_us_county.zip",
+        "status": "file_header_available",
+        "http_status": 200,
+        "bytes": "82328531",
+        "etag": null,
+        "last_modified": "Wed, 22 Sep 2021 19:48:48 GMT",
+        "data_completeness_verified": false
+      },
+      "traffic": {
+        "status": "metadata_and_counts_available",
+        "url": "https://geo.dot.gov/server/rest/services/Hosted/HPMS_FULL_DE_2021/FeatureServer/2",
+        "declared_service_year": 2021,
+        "empty_county_id_queries": [],
+        "observed_year_values": [
+          2021
+        ],
+        "year_values_verified": true,
+        "aadt_measurement_vintage_verified": false,
+        "year_interpretation": "Dataset year only; AADT measurement-date fields and geometry require further audit.",
+        "layer_metadata_sha256": "fe5897b7ed8755bf161ca1c959c3f50d2c8607d78f50643d2d43771ecc366c25",
+        "counties": {
+          "10001": {
+            "selected_traffic_records": 2450,
+            "null_or_negative_aadt_records": 91,
+            "geometry_and_road_match_rate": "not_audited"
+          },
+          "10003": {
+            "selected_traffic_records": 5665,
+            "null_or_negative_aadt_records": 154,
+            "geometry_and_road_match_rate": "not_audited"
+          },
+          "10005": {
+            "selected_traffic_records": 2447,
+            "null_or_negative_aadt_records": 60,
+            "geometry_and_road_match_rate": "not_audited"
+          }
+        },
+        "data_completeness_verified": false,
+        "dataset_year_field": "year_record"
+      },
+      "annual_hazard_calculation_ready": false
+    },
+    {
+      "year": 2022,
+      "state": "10",
+      "roads": {
+        "url": "https://www2.census.gov/geo/tiger/TIGER2022/PRISECROADS/tl_2022_10_prisecroads.zip",
+        "status": "file_header_available",
+        "http_status": 200,
+        "bytes": "1228569",
+        "etag": null,
+        "last_modified": "Mon, 31 Oct 2022 19:56:12 GMT",
+        "data_completeness_verified": false
+      },
+      "county_boundaries": {
+        "url": "https://www2.census.gov/geo/tiger/TIGER2022/COUNTY/tl_2022_us_county.zip",
+        "status": "file_header_available",
+        "http_status": 200,
+        "bytes": "83324165",
+        "etag": null,
+        "last_modified": "Mon, 31 Oct 2022 23:41:49 GMT",
+        "data_completeness_verified": false
+      },
+      "traffic": {
+        "status": "metadata_and_counts_available",
+        "url": "https://geo.dot.gov/server/rest/services/Hosted/HPMS_FULL_DE_2022/FeatureServer/0",
+        "declared_service_year": 2022,
+        "empty_county_id_queries": [],
+        "observed_year_values": [
+          2022
+        ],
+        "year_values_verified": true,
+        "aadt_measurement_vintage_verified": false,
+        "year_interpretation": "Dataset year only; AADT measurement-date fields and geometry require further audit.",
+        "layer_metadata_sha256": "d3ac0e79800e5e14289e8987ccd908980337c6178e6b7b4e17c1cd60fb8c1e30",
+        "counties": {
+          "10001": {
+            "selected_traffic_records": 3352,
+            "null_or_negative_aadt_records": 883,
+            "geometry_and_road_match_rate": "not_audited"
+          },
+          "10003": {
+            "selected_traffic_records": 8785,
+            "null_or_negative_aadt_records": 2777,
+            "geometry_and_road_match_rate": "not_audited"
+          },
+          "10005": {
+            "selected_traffic_records": 3575,
+            "null_or_negative_aadt_records": 1160,
+            "geometry_and_road_match_rate": "not_audited"
+          }
+        },
+        "data_completeness_verified": false,
+        "dataset_year_field": "year_record"
+      },
+      "annual_hazard_calculation_ready": false
+    },
+    {
+      "year": 2023,
+      "state": "10",
+      "roads": {
+        "url": "https://www2.census.gov/geo/tiger/TIGER2023/PRISECROADS/tl_2023_10_prisecroads.zip",
+        "status": "file_header_available",
+        "http_status": 200,
+        "bytes": "1228728",
+        "etag": null,
+        "last_modified": "Tue, 21 Nov 2023 17:34:41 GMT",
+        "data_completeness_verified": false
+      },
+      "county_boundaries": {
+        "url": "https://www2.census.gov/geo/tiger/TIGER2023/COUNTY/tl_2023_us_county.zip",
+        "status": "file_header_available",
+        "http_status": 200,
+        "bytes": "83451409",
+        "etag": null,
+        "last_modified": "Thu, 23 Nov 2023 02:21:53 GMT",
+        "data_completeness_verified": false
+      },
+      "traffic": {
+        "status": "county_coverage_requires_investigation",
+        "url": "https://geo.dot.gov/server/rest/services/Hosted/HPMS_FULL_DE_2023/FeatureServer/0",
+        "declared_service_year": 2023,
+        "empty_county_id_queries": [
+          "10003",
+          "10005"
+        ],
+        "observed_year_values": [
+          2023
+        ],
+        "year_values_verified": true,
+        "aadt_measurement_vintage_verified": false,
+        "year_interpretation": "Dataset year only; AADT measurement-date fields and geometry require further audit.",
+        "layer_metadata_sha256": "8bc15e4ba211b417f226f60fc435dc6efb44e5624d2e73c10aae9c9ed248afd0",
+        "counties": {
+          "10001": {
+            "selected_traffic_records": 15540,
+            "null_or_negative_aadt_records": 4732,
+            "geometry_and_road_match_rate": "not_audited"
+          },
+          "10003": {
+            "selected_traffic_records": 0,
+            "null_or_negative_aadt_records": 0,
+            "geometry_and_road_match_rate": "not_audited"
+          },
+          "10005": {
+            "selected_traffic_records": 0,
+            "null_or_negative_aadt_records": 0,
+            "geometry_and_road_match_rate": "not_audited"
+          }
+        },
+        "data_completeness_verified": false,
+        "dataset_year_field": "datayear"
+      },
+      "annual_hazard_calculation_ready": false
+    },
+    {
+      "year": 2024,
+      "state": "10",
+      "roads": {
+        "url": "https://www2.census.gov/geo/tiger/TIGER2024/PRISECROADS/tl_2024_10_prisecroads.zip",
+        "status": "file_header_available",
+        "http_status": 200,
+        "bytes": "1228141",
+        "etag": null,
+        "last_modified": "Fri, 27 Jun 2025 15:00:15 GMT",
+        "data_completeness_verified": false
+      },
+      "county_boundaries": {
+        "url": "https://www2.census.gov/geo/tiger/TIGER2024/COUNTY/tl_2024_us_county.zip",
+        "status": "file_header_available",
+        "http_status": 200,
+        "bytes": "83913260",
+        "etag": null,
+        "last_modified": "Fri, 27 Jun 2025 20:01:24 GMT",
+        "data_completeness_verified": false
+      },
+      "traffic": {
+        "status": "metadata_and_counts_available",
+        "url": "https://geo.dot.gov/server/rest/services/Hosted/HPMS_FULL_DE_2024/FeatureServer/0",
+        "declared_service_year": 2024,
+        "empty_county_id_queries": [],
+        "observed_year_values": [
+          2024
+        ],
+        "year_values_verified": true,
+        "aadt_measurement_vintage_verified": false,
+        "year_interpretation": "Dataset year only; AADT measurement-date fields and geometry require further audit.",
+        "layer_metadata_sha256": "b5bfe1e821d6467dbc5654391e950c3e3bf0ca7e2d9a0bce6f2bfb98f6143e20",
+        "counties": {
+          "10001": {
+            "selected_traffic_records": 3347,
+            "null_or_negative_aadt_records": 899,
+            "geometry_and_road_match_rate": "not_audited"
+          },
+          "10003": {
+            "selected_traffic_records": 9103,
+            "null_or_negative_aadt_records": 2840,
+            "geometry_and_road_match_rate": "not_audited"
+          },
+          "10005": {
+            "selected_traffic_records": 3876,
+            "null_or_negative_aadt_records": 1164,
+            "geometry_and_road_match_rate": "not_audited"
+          }
+        },
+        "data_completeness_verified": false,
+        "dataset_year_field": "data_year"
+      },
+      "annual_hazard_calculation_ready": false
+    },
+    {
+      "year": 2025,
+      "state": "10",
+      "roads": {
+        "url": "https://www2.census.gov/geo/tiger/TIGER2025/PRISECROADS/tl_2025_10_prisecroads.zip",
+        "status": "file_header_available",
+        "http_status": 200,
+        "bytes": "1227712",
+        "etag": null,
+        "last_modified": "Mon, 22 Sep 2025 18:00:27 GMT",
+        "data_completeness_verified": false
+      },
+      "county_boundaries": {
+        "url": "https://www2.census.gov/geo/tiger/TIGER2025/COUNTY/tl_2025_us_county.zip",
+        "status": "file_header_available",
+        "http_status": 200,
+        "bytes": "83989800",
+        "etag": null,
+        "last_modified": "Tue, 23 Sep 2025 02:15:55 GMT",
+        "data_completeness_verified": false
+      },
+      "traffic": {
+        "status": "not_listed_in_dot_hosted_catalog",
+        "searched_service": "HPMS_FULL_DE_2025",
+        "interpretation": "Not proof that no other official source exists"
+      },
+      "annual_hazard_calculation_ready": false
+    }
+  ],
+  "five_year_window_approved": false,
+  "annual_scores_generated": false,
+  "limitations": [
+    "HEAD proves access only, not annual completeness.",
+    "County AADT counts do not prove valid geometry or road match rates.",
+    "Current NFHL/WHP/NRI are not annual observations; separate scientific review required."
+  ]
+}
